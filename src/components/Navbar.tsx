@@ -42,23 +42,23 @@ export default function Navbar() {
                 <div className="w-full flex items-center overflow-hidden h-1/3">
                   <div className="group whitespace-nowrap text-[10rem] flex items-center h-full line-through hover:animate-slide font-bold tracking-widest hover:bg-white/50">
                     <span className="">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-slate-900">
+                    <span className="font-serif group-hover:visible invisible text-[#002837]">
                       HOME
                     </span>
                     <span className="group-hover:visible invisible">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-slate-900">
+                    <span className="font-serif group-hover:visible invisible text-[#002837]">
                       HOME
                     </span>
                     <span className="group-hover:visible invisible">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-slate-900">
+                    <span className="font-serif group-hover:visible invisible text-[#002837]">
                       HOME
                     </span>
                     <span className="group-hover:visible invisible">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-slate-900">
+                    <span className="font-serif group-hover:visible invisible text-[#002837]">
                       HOME
                     </span>
                     <span className="group-hover:visible invisible">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-slate-900">
+                    <span className="font-serif group-hover:visible invisible text-[#002837]">
                       HOME
                     </span>
                   </div>

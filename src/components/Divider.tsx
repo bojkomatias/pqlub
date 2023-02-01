@@ -1,6 +1,6 @@
 export default function Divider() {
   return (
-    <div className="w-full flex items-center overflow-hidden h-fit">
+    <div className="w-full flex items-center overflow-hidden h-fit bg-white">
       <div className="whitespace-nowrap text-[4rem] animate-slide font-bold tracking-widest line-through">
         <span className="bg-black">DESIGN</span>
         <span className="bg-white text-black">ENGINEER</span>

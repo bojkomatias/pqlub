@@ -27,45 +27,28 @@ const features = [
 
 export default function Feature() {
   return (
-    <div className="overflow-hidden bg-white h-screen py-24 sm:py-32 w-full">
-      <div className="px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:max-w-6xl lg:grid-cols-2">
-          <div className="lg:pr-8 lg:pt-4">
-            <div className="lg:max-w-lg">
-              <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">
-                Deploy faster
-              </h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                A better workflow
-              </p>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-9">
-                    <dt className="inline font-semibold text-gray-900">
-                      <feature.icon
-                        className="absolute top-1 left-1 h-5 w-5 text-indigo-600"
-                        aria-hidden="true"
-                      />
-                      {feature.name}
-                    </dt>{" "}
-                    <dd className="inline">{feature.description}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+    <div className="w-full bg-gradient-to-tl from-[#034f6a] to-[#002837] text-slate-200">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-7xl mt-24">
+          P implies Q, <br /> as precision leads to quality results.
+        </h2>
+        <h3 className="text-2xl font-thin font-serif">
+          Our software factory uses precision to drive performance, ensuring
+          every solution delivered meets the highest standards of quality.
+        </h3>
+        <div className="w-full grid-cols-3 grid gap-8 mx-auto my-24">
+          <div className="col-span-2 rounded-lg h-96 text-center ring-1 hover:ring-[#bfdb38] ring-[#fc7300]/50 p-12">
+            <h3 className="text-xl">Architect your solution</h3>
           </div>
-          <img
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-            alt="Product screenshot"
-            className="w-[48rem] opacity-40 max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-            width={2432}
-            height={1442}
-          />
+          <div className="col-span-1 rounded-lg h-96 text-center ring-1 ring-slate-50/5 hover:ring-slate-100/30 p-12">
+            <h3 className="text-xl">Consult on software technologies</h3>
+          </div>
+          <div className="col-span-1 rounded-lg h-96 text-center ring-1 ring-slate-50/5 hover:ring-slate-100/30 p-12">
+            <h3 className="text-xl">Coach your team</h3>
+          </div>
+          <div className="col-span-2 rounded-lg h-96 text-center ring-1 ring-slate-50/5 hover:ring-slate-100/30 p-12">
+            <h3 className="text-xl">Build a brand new business</h3>
+          </div>
         </div>
       </div>
     </div>
