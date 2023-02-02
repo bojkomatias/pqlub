@@ -2,7 +2,8 @@
 
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function Navbar() {
   let [isOpen, setIsOpen] = useState(false);
@@ -10,16 +11,30 @@ export default function Navbar() {
   return (
     <>
       <div
-        className="h-[8vh] w-full fixed left-0 top-0 flex items-center z-20
+        className="h-14 top-2 w-full fixed  inset-0 flex items-center z-20
       "
       >
-        <span className="text-2xl font-bold px-24 flex items-center h-full flex-grow">
-          PQCLUB
-        </span>
-
-        <button type="button" onClick={() => setIsOpen(true)} className="m-12">
-          <Bars3Icon className="h-6 w-6 stroke-white" />
-        </button>
+        <h1 className="px-24 flex items-center h-full flex-grow">pqlub</h1>
+        <h2 className="text-3xl px-1 cursor-pointer">Got something in mind?</h2>
+        {isOpen ? (
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="outline-0 m-12 group uppercase flex text-white items-center gap-2 text-xl font-light hover:text-orange"
+          >
+            Close
+            <XMarkIcon className="h-8 w-8 stroke-green group-hover:stroke-orange" />
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setIsOpen(true)}
+            className="outline-0 m-12 group uppercase flex text-white items-center gap-2 text-xl font-light hover:text-orange"
+          >
+            Menu
+            <Bars3Icon className="h-8 w-8 stroke-green group-hover:stroke-orange" />
+          </button>
+        )}
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -38,36 +53,93 @@ export default function Navbar() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full h-screen transform transition-all bg-black z-30">
-                <div className="w-full flex items-center overflow-hidden h-1/3">
-                  <div className="group whitespace-nowrap text-[10rem] flex items-center h-full line-through hover:animate-slide font-bold tracking-widest hover:bg-white/50">
-                    <span className="">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-[#002837]">
+              <Dialog.Panel className="w-full h-full transform transition-all pt-16 bg-black z-30">
+                <div className="group w-full flex items-center overflow-hidden h-1/3">
+                  <Link
+                    href={"/"}
+                    onClick={() => setIsOpen(false)}
+                    className="whitespace-nowrap text-[10rem] h-full hover:animate-slide tracking-widest flex w-full items-center justify-center"
+                  >
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange">
                       HOME
                     </span>
-                    <span className="group-hover:visible invisible">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-[#002837]">
+                    <span className="bg-black text-green group-hover:block hidden line-through decoration-4 decoration-orange">
                       HOME
                     </span>
-                    <span className="group-hover:visible invisible">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-[#002837]">
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange ">
                       HOME
                     </span>
-                    <span className="group-hover:visible invisible">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-[#002837]">
+                    <span className=" group-hover:text-green group-hover:line-through group-hover:decoration-4 group-hover:decoration-orange text-white">
                       HOME
                     </span>
-                    <span className="group-hover:visible invisible">HOME</span>
-                    <span className="font-serif group-hover:visible invisible text-[#002837]">
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange">
                       HOME
                     </span>
-                  </div>
+                    <span className="bg-black text-green group-hover:block hidden line-through decoration-4 decoration-orange">
+                      HOME
+                    </span>
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange ">
+                      HOME
+                    </span>
+                  </Link>
                 </div>
-                <div className="text-8xl h-1/3 flex items-center border-y-2 justify-center font-bold">
-                  PORTFOLIO
+                <div className="group w-full flex items-center overflow-hidden h-1/3 border-y">
+                  <Link
+                    href={"/"}
+                    onClick={() => setIsOpen(false)}
+                    className="whitespace-nowrap text-[10rem] h-full hover:animate-slide tracking-widest flex w-full items-center justify-center"
+                  >
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange">
+                      PORTFOLIO
+                    </span>
+                    <span className="bg-black text-green group-hover:block hidden line-through decoration-4 decoration-orange">
+                      PORTFOLIO
+                    </span>
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange ">
+                      PORTFOLIO
+                    </span>
+                    <span className=" group-hover:text-green group-hover:line-through group-hover:decoration-4 group-hover:decoration-orange text-white">
+                      PORTFOLIO
+                    </span>
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange">
+                      PORTFOLIO
+                    </span>
+                    <span className="bg-black text-green group-hover:block hidden line-through decoration-4 decoration-orange">
+                      PORTFOLIO
+                    </span>
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange ">
+                      PORTFOLIO
+                    </span>
+                  </Link>
                 </div>
-                <div className="text-8xl h-1/3 flex items-center  justify-center font-bold">
-                  CONTACT
+                <div className="group w-full flex items-center overflow-hidden h-1/3">
+                  <Link
+                    href={"/"}
+                    onClick={() => setIsOpen(false)}
+                    className="whitespace-nowrap text-[10rem] h-full hover:animate-slide tracking-widest flex w-full items-center justify-center"
+                  >
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange">
+                      CONTACT
+                    </span>
+                    <span className="bg-black text-green group-hover:block hidden line-through decoration-4 decoration-orange">
+                      CONTACT
+                    </span>
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange ">
+                      CONTACT
+                    </span>
+                    <span className=" group-hover:text-green group-hover:line-through group-hover:decoration-4 group-hover:decoration-orange text-white">
+                      CONTACT
+                    </span>
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange">
+                      CONTACT
+                    </span>
+                    <span className="bg-black text-green group-hover:block hidden line-through decoration-4 decoration-orange">
+                      CONTACT
+                    </span>
+                    <span className="bg-white text-navy group-hover:block hidden line-through decoration-4 decoration-orange ">
+                      CONTACT
+                    </span>
+                  </Link>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

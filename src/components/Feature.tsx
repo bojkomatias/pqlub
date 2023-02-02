@@ -27,17 +27,16 @@ const features = [
 
 export default function Feature() {
   return (
-    <div className="w-full bg-gradient-to-tl from-[#034f6a] to-[#002837] text-slate-200">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-7xl mt-24">
-          P implies Q, <br /> as precision leads to quality results.
-        </h2>
-        <h3 className="text-2xl font-thin font-serif">
+    <div className="w-full bg-gradient-to-tl from-black to-navy text-slate-200">
+      <div className="max-w-7xl mx-auto py-24">
+        <h1>{"p -> q,"}</h1>
+        <h2>as precision leads to quality results.</h2>
+        <h3>
           Our software factory uses precision to drive performance, ensuring
           every solution delivered meets the highest standards of quality.
         </h3>
         <div className="w-full grid-cols-3 grid gap-8 mx-auto my-24">
-          <div className="col-span-2 rounded-lg h-96 text-center ring-1 hover:ring-[#bfdb38] ring-[#fc7300]/50 p-12">
+          <div className="col-span-2 h-96 text-center border border-white/5 bg-1 bg-cover rounded-3xl hover:border-orange hover:scale-105 transition p-12">
             <h3 className="text-xl">Architect your solution</h3>
           </div>
           <div className="col-span-1 rounded-lg h-96 text-center ring-1 ring-slate-50/5 hover:ring-slate-100/30 p-12">

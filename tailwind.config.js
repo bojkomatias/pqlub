@@ -4,12 +4,15 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
-      boxShadow: {
-        'custom': '0 20px 40px 5px',
+      colors: {
+        'navy': '#00425A',
+        'teal': '#1F8A70',
+        'green': '#BFDB38',
+        'orange': '#FC7300',
       },
       fontFamily: {
-        sans: ['var(--font-lexend)'],
-        serif: ['var(--font-lobster)'],
+        sans: ['var(--font-sans)'],
+        serif: ['var(--font-handwritten)'],
       },
       backgroundImage: {
         '1': "url('/sape.jpg')",
@@ -22,9 +25,8 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',
-        'slide': 'slide 30s linear infinite'
+        'slide': 'slide 20s linear infinite'
       }
-
     },
   },
   plugins: [],
