@@ -9,12 +9,12 @@ import Cta from "@/components/Cta";
 export default function Home() {
   return (
     <main className="w-full antialiased flex flex-col items-center">
-      {/* <Hero /> */}
-      {/* <Divider /> */}
+      <Hero />
+      <Divider />
       <FeatureTwo />
       <FeatureThree />
       <Team />
-      <Cta /> 
+      <Cta />
     </main>
   );
 }

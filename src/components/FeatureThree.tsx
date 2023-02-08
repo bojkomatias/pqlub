@@ -1,48 +1,48 @@
 import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
+  CogIcon,
+  CommandLineIcon,
+  RocketLaunchIcon,
+  ServerStackIcon,
+  WindowIcon,
+  ArrowTrendingUpIcon,
 } from "@heroicons/react/20/solid";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Tech consulting.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-    icon: CloudArrowUpIcon,
+      "We will help your business stay ahead in technology and reach their goals by assessing current systems, identifying areas for improvement, and recommending solutions.",
+    icon: RocketLaunchIcon,
   },
   {
-    name: "SSL certificates.",
+    name: "Team growth.",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: LockClosedIcon,
+      "We will build and expand successful teams by hiring top talent, training and developing employees for your business.",
+    icon: ArrowTrendingUpIcon,
   },
   {
-    name: "Simple queues.",
+    name: "Software engineering.",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
-    icon: ArrowPathIcon,
+      "We cover the entire development lifecycle and create custom solutions that meet clients' unique needs to ensure project success.",
+    icon: CommandLineIcon,
   },
   {
-    name: "Advanced security.",
+    name: "UI/UX design.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-    icon: FingerPrintIcon,
+      "We will create engaging and intuitive user experiences for software and websites through wireframing, prototyping, and visually stunning designs.",
+    icon: WindowIcon,
   },
   {
-    name: "Powerful API.",
+    name: "DevOps and maintenance.",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: Cog6ToothIcon,
+      "We integrate development and operations teams, automate processes, and provide ongoing support to ensure the reliability and performance of software systems.",
+    icon: ServerStackIcon,
   },
   {
-    name: "Database backups.",
+    name: "Systems engineering.",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. ",
-    icon: ServerIcon,
+      "We will provide end-to-end solutions for complex systems, improving efficiency and effectiveness through assessment, recommendations, and integration. ",
+    icon: CogIcon,
   },
 ];
 
@@ -92,14 +92,17 @@ export default function FeatureThree() {
       .timeline({
         scrollTrigger: {
           trigger: "#ftsection",
-          start: "top bottom",
+          start: "top center",
           end: () => "+=40%",
           scrub: true,
-          markers: true,
         },
         defaults: { ease: Power1.easeInOut },
       })
-      .fromTo("#ftsection", { opacity: 0 }, { opacity: 1 });
+      .fromTo(
+        "#ftsection",
+        { opacity: 0, yPercent: 60, scale: 1.2 },
+        { opacity: 1, yPercent: 0, scale: 1 }
+      );
   }, []);
   return (
     <div
@@ -132,7 +135,7 @@ export default function FeatureThree() {
       </svg>
       <div className="relative w-full py-16 sm:py-24">
         <div id="text2" className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-green px-8">
+          <div className="mx-auto max-w-2xl text-green px-4">
             <h1>
               <span className="bg-white invert text-black">{"p -> q,"}</span>
               <br />

@@ -26,7 +26,7 @@ const Cta = () => {
           "bg-green flex justify-center items-center text-black p-4 hover:bg-orange hover:text-white"
         }
       >
-        <span className="text-4xl mr-2">NOW!</span>
+        <span className="text-lg lg:text-3xl mr-2">NOW!</span>
         <ArrowLongRightIcon className="w-6 h-6 inline-block" />
       </a>
     );
@@ -37,26 +37,27 @@ const Cta = () => {
       id="cta"
       className="relative transition ease-in-out duration-200 h-screen w-full isolate overflow-hidden bg-black"
     >
-      <div className="absolute inset-x-0 bottom-36">
+      <div className="absolute inset-x-0 bottom-20">
         <div className="flex flex-col justify-center items-center container mx-auto">
-          <h1 className="w-full text-6xl text-center text-black">
-            Work with us!
-          </h1>
+          <h1 className="w-full text-center text-black">Work with us!</h1>
           <Image src="/a.png" alt="contact-image" width={600} height={600} />
           {/* <h2>May be some asset here</h2> */}
         </div>
 
         <div
-          className="w-1/2 h-1/2 border-solid flex justify-center items-center border-white mx-auto"
+          className="px-2 border-solid flex justify-center items-center border-white mx-auto"
           id="cta-button"
         >
           <div
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="text-center mt-36 flex text-black  bg-green border border-black border-2 transition-bg duration-500 ease-in-out transform hover:bg-black hover:text-green cursor-pointer"
+            className="text-center mt-36 flex text-black bg-green border-black border-2 transition-bg duration-500 ease-in-out transform hover:bg-black hover:text-green cursor-pointer"
           >
             <>
-              <p onClick={copyToClipboard} className="p-8 text-3xl">
+              <p
+                onClick={copyToClipboard}
+                className="lg:p-8 p-4 text-lg lg:text-3xl"
+              >
                 {!isHovered
                   ? "HEY YOU!"
                   : wasCopied
