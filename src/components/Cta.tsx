@@ -37,32 +37,35 @@ const Cta = () => {
       id="cta"
       className="relative transition ease-in-out duration-200 h-screen w-full isolate overflow-hidden bg-black"
     >
-      <div className="mt-[20rem]  flex flex-col justify-center items-center container mx-auto">
-        <h1 className="w-full text-6xl text-center text-black">
-          Work with us!
-        </h1>
-        <Image src="/a.png" alt="contact-image" width={600} height={600} />
-        {/* <h2>May be some asset here</h2> */}
-      </div>
-      <div
-        className="w-1/2 h-1/2 border-solid flex justify-center items-center border-white mx-auto"
-        id="cta-button"
-      >
+      <div className="absolute inset-x-0 bottom-36">
+        <div className="flex flex-col justify-center items-center container mx-auto">
+          <h1 className="w-full text-6xl text-center text-black">
+            Work with us!
+          </h1>
+          <Image src="/a.png" alt="contact-image" width={600} height={600} />
+          {/* <h2>May be some asset here</h2> */}
+        </div>
+
         <div
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          className="text-center flex text-black  bg-green border border-black border-2 transition-bg duration-500 ease-in-out transform hover:bg-black hover:text-green cursor-pointer"
+          className="w-1/2 h-1/2 border-solid flex justify-center items-center border-white mx-auto"
+          id="cta-button"
         >
-          <>
-          <p onClick={copyToClipboard} className="p-8 text-3xl">
-            {!isHovered
-              ? "HEY YOU!"
-              : wasCopied
-              ? "our email was copied"
-              : "tell us about your project"}
-          </p>
-          {isHovered ? mailTo() : null}
-          </>
+          <div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="text-center mt-36 flex text-black  bg-green border border-black border-2 transition-bg duration-500 ease-in-out transform hover:bg-black hover:text-green cursor-pointer"
+          >
+            <>
+              <p onClick={copyToClipboard} className="p-8 text-3xl">
+                {!isHovered
+                  ? "HEY YOU!"
+                  : wasCopied
+                  ? "our email was copied"
+                  : "tell us about your project"}
+              </p>
+              {isHovered ? mailTo() : null}
+            </>
+          </div>
         </div>
       </div>
 
@@ -70,7 +73,7 @@ const Cta = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         className={
-          "absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] transition ease-in-out duration-700" +
+          "absolute top-1/2 left-1/2 -translate-x-1/2 -z-10 h-[64rem] w-[64rem] [mask-image:radial-gradient(closest-side,white,transparent)] transition ease-in-out duration-700" +
           (isHovered ? " scale-[20.0]" : " scale-75")
         }
         aria-hidden="true"
