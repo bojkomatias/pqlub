@@ -15,7 +15,9 @@ export default function Navbar() {
       "
       >
         <h1 className="px-24 flex items-center h-full flex-grow">pqlub</h1>
-        <h2 className="text-3xl px-1 cursor-pointer">Got something in mind?</h2>
+        <a href="#cta">
+          <h2 className="text-3xl px-1 cursor-pointer">Got something in mind?</h2>
+        </a>
         {isOpen ? (
           <button
             type="button"

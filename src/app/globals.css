@@ -13,3 +13,7 @@
     @apply text-2xl font-serif mt-2;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
