@@ -23,7 +23,7 @@ const features = [
   {
     name: "Software engineering.",
     description:
-      "We cover the entire development lifecycle and create custom solutions that meet clients' unique needs to ensure project success.",
+      "We cover the entire development lifecycle and create custom solutions that meet clients unique needs to ensure project success.",
     icon: CommandLineIcon,
   },
   {

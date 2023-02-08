@@ -7,6 +7,7 @@ interface TeamMember {
   image: string;
   role: string;
   website: string;
+  image?: string;
 }
 
 const TEAM_DATA: TeamMember[] = [
@@ -15,18 +16,21 @@ const TEAM_DATA: TeamMember[] = [
     image: "/images/mati.png",
     role: "Co Founder / CTO",
     website: "amilcarrey.ar",
+    image: "amilcar.jpeg",
   },
   {
     name: "Matias Bojko",
     image: "/images/mati.png",
     role: "Co Founder / CEO",
     website: "matiasbojko.com",
+    image: "mati.jpeg",
   },
   {
     name: "Nicolas Horn",
     image: "/images/mati.png",
     role: "Co Founder / CFO",
     website: "nicohorn.com",
+    image: "nicolas.jpg",
   },
 ];
 
@@ -41,10 +45,10 @@ export default function Team() {
       <div className="flex flex-col items-center justify-around gap-4">
         <div className={`rounded-full border-4 border-dashed h-48 w-48`}>
           <Image
-            src={image}
+            src={`/images/${image}`}
             width={200}
             height={200}
-            // className={`object-contain`}
+            className={`aspect-square w-full rounded-full object-cover`}
             alt={""}
           />
         </div>
