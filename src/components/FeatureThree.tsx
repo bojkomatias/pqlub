@@ -83,59 +83,102 @@ export default function FeatureThree() {
           scrub: true,
           pin: true,
           pinSpacing: true,
-          markers: true,
         },
         defaults: { ease: Power1.easeInOut },
       })
       .fromTo("#ft2in", { yPercent: 100 }, { yPercent: 0 })
       .fromTo("#img2", { yPercent: -100 }, { yPercent: 0 }, 0);
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#ftsection",
+          start: "top bottom",
+          end: () => "+=40%",
+          scrub: true,
+          markers: true,
+        },
+        defaults: { ease: Power1.easeInOut },
+      })
+      .fromTo("#ftsection", { opacity: 0 }, { opacity: 1 });
   }, []);
   return (
-    <div id="third" className="relative w-full bg-green py-16 sm:py-24">
-      <div id="text2" className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl">
-          <h1>
-            <span className="bg-white invert text-black">{"p -> q,"}</span>
-            <br />
-            as precision leads to quality results.
-          </h1>
-
-          <h2 className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            impedit perferendis suscipit eaque, iste dolor cupiditate
-            blanditiis.
-          </h2>
-        </div>
-      </div>
-      <div
-        id="ft2out"
-        className="relative overflow-hidden mt-16 h-[30rem] max-w-6xl w-full mx-auto rounded-2xl ring-1 ring-offset-8 border-dashed ring-black/20 ring-offset-green/50 bg-navy shadow-lg"
+    <div
+      id="third"
+      className="relative w-full bg-white isolate overflow-hidden"
+    >
+      <svg
+        viewBox="0 0 1108 632"
+        aria-hidden="true"
+        className="absolute top-10 left-[calc(50%-4rem)] -z-10 w-[69.25rem] max-w-none transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
       >
-        <div id="ft2in" className="absolute inset-0 overflow-hidden">
-          <div
-            id="img2"
-            className=" absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-center"
-          />
-        </div>
-      </div>
+        <path
+          fill="url(#175c433f-44f6-4d59-93f0-c5c51ad5566d)"
+          fillOpacity=".2"
+          d="M235.233 402.609 57.541 321.573.83 631.05l234.404-228.441 320.018 145.945c-65.036-115.261-134.286-322.756 109.01-230.655C968.382 433.026 1031 651.247 1092.23 459.36c48.98-153.51-34.51-321.107-82.37-385.717L810.952 324.222 648.261.088 235.233 402.609Z"
+        />
+        <defs>
+          <linearGradient
+            id="175c433f-44f6-4d59-93f0-c5c51ad5566d"
+            x1="1220.59"
+            x2="-85.053"
+            y1="432.766"
+            y2="638.714"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="black" />
+            <stop offset={1} stopColor="#BFDB38" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div className="relative w-full py-16 sm:py-24">
+        <div id="text2" className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-green px-8">
+            <h1>
+              <span className="bg-white invert text-black">{"p -> q,"}</span>
+              <br />
+              as precision leads to quality results.
+            </h1>
 
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-        <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-          {features.map((feature) => (
-            <div key={feature.name} className="relative pl-9">
-              <dt className="inline font-semibold text-navy">
-                <feature.icon
-                  className="absolute top-1 left-1 h-5 w-5 text-orange"
-                  aria-hidden="true"
-                />
-                {feature.name}
-              </dt>{" "}
-              <dd className="inline font-light text-black">
-                {feature.description}
-              </dd>
-            </div>
-          ))}
-        </dl>
+            <h2 className="mt-6 text-lg leading-8 text-gray-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              impedit perferendis suscipit eaque, iste dolor cupiditate
+              blanditiis.
+            </h2>
+          </div>
+        </div>
+        <div
+          id="ft2out"
+          className="relative overflow-hidden mt-16 h-96 max-w-6xl -mx-1 lg:mx-auto lg:rounded-2xl ring-1 ring-offset-8 border-dashed ring-black/20 ring-offset-green/50 bg-navy shadow-lg"
+        >
+          <div id="ft2in" className="absolute inset-0 overflow-hidden">
+            <div
+              id="img2"
+              className=" absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-left-top"
+            />
+          </div>
+        </div>
+
+        <div
+          id="ftsection"
+          className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8"
+        >
+          <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+            {features.map((feature) => (
+              <div key={feature.name} className="relative pl-9">
+                <dt className="inline font-semibold text-navy">
+                  <feature.icon
+                    className="absolute top-1 left-1 h-5 w-5 text-orange"
+                    aria-hidden="true"
+                  />
+                  {feature.name}
+                </dt>{" "}
+                <dd className="inline font-light text-black">
+                  {feature.description}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </div>
     </div>
   );

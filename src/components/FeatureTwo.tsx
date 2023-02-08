@@ -13,7 +13,7 @@ export default function FeatureTwo() {
           end: () => "-=20+=" + section.offsetWidth / 2,
           scrub: true,
           anticipatePin: 1,
-          // once: true,
+          once: true,
         },
         defaults: { ease: Power2.easeInOut },
       });
@@ -37,7 +37,6 @@ export default function FeatureTwo() {
           scrub: true,
           pin: true,
           pinSpacing: true,
-          markers: true,
         },
         defaults: { ease: Power1.easeInOut },
       })
@@ -47,7 +46,7 @@ export default function FeatureTwo() {
   return (
     <div
       id="second"
-      className="overflow-hidden w-full h-screen relative isolate bg-gradient-to-tl from-black to-navy"
+      className="overflow-hidden w-screen h-screen relative isolate bg-gradient-to-tl from-black to-navy"
     >
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -102,12 +101,12 @@ export default function FeatureTwo() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="relative mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8">
+      <div className="flex flex-col md:flex-row mx-auto max-w-7xl px-6 flex items-center sm:pb-32 lg:flex lg:py-40 lg:px-8">
         <div
           id="text1"
-          className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8"
+          className="flex flex-col justify-center items-center mt-6 md:justify-start mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8"
         >
-          <h1 className="mt-10 text-white">
+          <h1 className="mt-10 text-black font-outline-2">
             Deploy to the cloud with confidence
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
