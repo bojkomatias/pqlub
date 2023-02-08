@@ -45,7 +45,7 @@ export default function Team() {
             src={`/images/default.jpeg`}
             width={200}
             height={200}
-            // className={`object-contain`}
+            className={`aspect-square w-full rounded-full object-cover`}
             alt={""}
           />
         </div>
