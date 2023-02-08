@@ -13,8 +13,8 @@ export default function Home() {
       {/* <Divider />
       <FeatureTwo /> */}
       <FeatureThree />
-      {/* <Team />
-      <Cta /> */}
+      <Team />
+      {/* <Cta />  */}
     </main>
   );
 }

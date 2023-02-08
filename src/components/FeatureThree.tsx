@@ -88,9 +88,24 @@ export default function FeatureThree() {
       })
       .fromTo("#ft2in", { yPercent: 100 }, { yPercent: 0 })
       .fromTo("#img2", { yPercent: -100 }, { yPercent: 0 }, 0);
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#ftsection",
+          start: "top bottom",
+          end: () => "+=40%",
+          scrub: true,
+          markers: true,
+        },
+        defaults: { ease: Power1.easeInOut },
+      })
+      .fromTo("#ftsection", { opacity: 0 }, { opacity: 1 });
   }, []);
   return (
-    <div id="third" className="relative w-full bg-white isolate">
+    <div
+      id="third"
+      className="relative w-full bg-white isolate overflow-hidden"
+    >
       <svg
         viewBox="0 0 1108 632"
         aria-hidden="true"
@@ -117,7 +132,7 @@ export default function FeatureThree() {
       </svg>
       <div className="relative w-full py-16 sm:py-24">
         <div id="text2" className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-green">
+          <div className="mx-auto max-w-2xl text-green px-8">
             <h1>
               <span className="bg-white invert text-black">{"p -> q,"}</span>
               <br />
@@ -133,17 +148,20 @@ export default function FeatureThree() {
         </div>
         <div
           id="ft2out"
-          className="relative overflow-hidden mt-16 h-[30rem] max-w-6xl w-full mx-auto rounded-2xl ring-1 ring-offset-8 border-dashed ring-black/20 ring-offset-green/50 bg-navy shadow-lg"
+          className="relative overflow-hidden mt-16 h-96 max-w-6xl -mx-1 lg:mx-auto lg:rounded-2xl ring-1 ring-offset-8 border-dashed ring-black/20 ring-offset-green/50 bg-navy shadow-lg"
         >
           <div id="ft2in" className="absolute inset-0 overflow-hidden">
             <div
               id="img2"
-              className=" absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-center"
+              className=" absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-left-top"
             />
           </div>
         </div>
 
-        <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+        <div
+          id="ftsection"
+          className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8"
+        >
           <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-9">

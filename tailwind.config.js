@@ -14,10 +14,10 @@ module.exports = {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-handwritten)'],
       },
-      boxShadow:{},
+      boxShadow: {},
       backgroundImage: {
-        '1': "url('/sape.jpg')",
-        '2': "url('/sape2.jpg')",
+        '1': "url('/hero-bg.jpg')",
+        '2': "url('/hero-bg-dark.jpg')",
       },
       transitionDuration: { DEFAULT: '300ms' },
       transitionTimingFunction: {
