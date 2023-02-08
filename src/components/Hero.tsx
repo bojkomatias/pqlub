@@ -37,7 +37,7 @@ export default function SectionOne() {
     <div id="first" className="h-screen w-full bg-navy">
       <div
         id="outer"
-        className="shadow-lg bg-teal absolute inset-x-0 inset-y-60 overflow-hidden w-full z-10 justify-center flex items-center"
+        className="bg-teal absolute inset-x-0 inset-y-60 overflow-hidden w-full z-10 justify-center flex items-center"
       >
         <div
           id="inner"

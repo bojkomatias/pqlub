@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <main className="w-full antialiased flex flex-col items-center">
       <Hero />
-      {/* <Divider />
-      <FeatureTwo /> */}
+      <Divider />
+      <FeatureTwo />
       <FeatureThree />
       <Team />
-      {/* <Cta />  */}
+      <Cta />
     </main>
   );
 }
