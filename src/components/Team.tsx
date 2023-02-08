@@ -15,21 +15,21 @@ const TEAM_DATA: TeamMember[] = [
     shortName: "amilcar",
     role: "Co Founder / CTO",
     website: "amilcarrey.ar",
-    image: "amilcar.jpeg"
+    image: "amilcar.jpeg",
   },
   {
     name: "Matias Bojko",
     shortName: "mati",
     role: "Co Founder / CEO",
     website: "matiasbojko.com",
-    image: "mati.jpeg"
+    image: "mati.jpeg",
   },
   {
     name: "Nicolas Horn",
     shortName: "nico",
     role: "Co Founder / CFO",
     website: "nicohorn.com",
-    image: "nico.jpeg"
+    image: "nicolas.jpg",
   },
 ];
 
@@ -42,9 +42,7 @@ export default function Team() {
   }: TeamMember) => {
     return (
       <div className="flex flex-col items-center justify-around gap-4">
-        <div
-          className={`rounded-full border-4 border-dashed h-48 w-48`}
-        >
+        <div className={`rounded-full border-4 border-dashed h-48 w-48`}>
           <Image
             src={`/images/${image}`}
             width={200}
