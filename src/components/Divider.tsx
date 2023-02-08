@@ -91,7 +91,7 @@ function ParallaxText({ baseVelocity = -2 }: ParallaxProps) {
 export default function Divider() {
   return (
     <div className="w-full flex items-center overflow-hidden h-fit bg-white">
-      <div className="whitespace-nowrap text-[5rem] tracking-widest line-through decoration-orange decoration-dotted decoration-8">
+      <div className="whitespace-nowrap text-[5rem] tracking-widest line-through decoration-orange decoration-8">
         <ParallaxText />
       </div>
     </div>

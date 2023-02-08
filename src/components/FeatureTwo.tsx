@@ -13,7 +13,7 @@ export default function FeatureTwo() {
           end: () => "-=20+=" + section.offsetWidth / 2,
           scrub: true,
           anticipatePin: 1,
-          // once: true,
+          once: true,
         },
         defaults: { ease: Power2.easeInOut },
       });
@@ -37,7 +37,6 @@ export default function FeatureTwo() {
           scrub: true,
           pin: true,
           pinSpacing: true,
-          markers: true,
         },
         defaults: { ease: Power1.easeInOut },
       })
@@ -102,7 +101,7 @@ export default function FeatureTwo() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="relative mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-6 flex items-center sm:pb-32 lg:flex lg:py-40 lg:px-8">
         <div
           id="text1"
           className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8"
