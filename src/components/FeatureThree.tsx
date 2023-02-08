@@ -92,14 +92,17 @@ export default function FeatureThree() {
       .timeline({
         scrollTrigger: {
           trigger: "#ftsection",
-          start: "top bottom",
+          start: "top center",
           end: () => "+=40%",
           scrub: true,
-          markers: true,
         },
         defaults: { ease: Power1.easeInOut },
       })
-      .fromTo("#ftsection", { opacity: 0 }, { opacity: 1 });
+      .fromTo(
+        "#ftsection",
+        { opacity: 0, yPercent: 60, scale: 1.2 },
+        { opacity: 1, yPercent: 0, scale: 1 }
+      );
   }, []);
   return (
     <div
@@ -132,7 +135,7 @@ export default function FeatureThree() {
       </svg>
       <div className="relative w-full py-16 sm:py-24">
         <div id="text2" className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-green px-8">
+          <div className="mx-auto max-w-2xl text-green px-4">
             <h1>
               <span className="bg-white invert text-black">{"p -> q,"}</span>
               <br />

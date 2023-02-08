@@ -101,10 +101,10 @@ export default function FeatureTwo() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="flex flex-col md:flex-row mx-auto max-w-7xl px-6 flex items-center sm:pb-32 lg:flex lg:py-40 lg:px-8">
+      <div className="flex flex-col md:flex-row mx-auto max-w-7xl px-6 items-center sm:pb-32 lg:flex lg:py-40 lg:px-8">
         <div
           id="text1"
-          className="flex flex-col justify-center items-center mt-6 md:justify-start mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8"
+          className="flex flex-col justify-center items-center mt-6 md:justify-start mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 px-4"
         >
           <h1 className="mt-10 text-black font-outline-2">
             Deploy to the cloud with confidence

@@ -24,7 +24,7 @@ export default function Navbar() {
             Got something in mind?
           </h2>
         </a>
-        {isOpen ? (
+        {/* {isOpen ? (
           <button
             type="button"
             onClick={() => setIsOpen(false)}
@@ -42,7 +42,7 @@ export default function Navbar() {
             <span className="hidden md:block">menu</span>
             <Bars3Icon className="h-8 w-8 stroke-green group-hover:stroke-orange" />
           </button>
-        )}
+        )} */}
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>

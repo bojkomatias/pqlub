@@ -1,4 +1,5 @@
 import { LinkIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
 
 export default function Team() {
   return (
@@ -20,7 +21,14 @@ export default function Team() {
             </span>
           </div>
           <div>
-            <div className="rounded-full border-4 border-dashed h-48 w-48" />
+            <div className="rounded-full border-4 border-dashed h-48 w-48">
+              <Image
+                src={"/profile-pic.png"}
+                alt={"Matias bojko"}
+                height={200}
+                width={200}
+              />
+            </div>
             <h1>Matias Bojko</h1>
             <span className="bg-black px-2 text-orange uppercase text-xl">
               Co Founder / CEO
