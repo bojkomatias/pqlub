@@ -11,7 +11,7 @@ export default function Team() {
           <div className="h-[35rem]" />
         </div>
 
-        <div className="flex items-center justify-around my-24">
+        <div className="flex flex-col md:flex-row items-center justify-around my-24">
           <div>
             <div className="rounded-full border-4 border-dashed h-48 w-48" />
             <h1>Amilcar Rey</h1>

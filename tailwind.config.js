@@ -5,16 +5,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'navy': '#00425A',
+        'navy': '#001c26',
         'teal': '#1F8A70',
         'green': '#BFDB38',
         'orange': '#FC7300',
       },
-
       fontFamily: {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-handwritten)'],
       },
+      boxShadow:{},
       backgroundImage: {
         '1': "url('/sape.jpg')",
         '2': "url('/sape2.jpg')",

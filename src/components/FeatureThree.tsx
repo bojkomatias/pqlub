@@ -46,10 +46,53 @@ const features = [
   },
 ];
 
+import gsap, { Power2, Power1 } from "gsap";
+import { useEffect } from "react";
+
 export default function FeatureThree() {
+  useEffect(() => {
+    gsap.utils.toArray("#third").forEach((section: any) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: () => "+=100+=" + section.offsetWidth,
+          scrub: true,
+          anticipatePin: 1,
+          // once: true,
+        },
+        defaults: { ease: Power2.easeInOut },
+      });
+      tl.fromTo(
+        section.querySelector("#text2"),
+        { yPercent: -20, scale: 1.2 },
+        { yPercent: 0, scale: 1 }
+      ).fromTo(
+        section.querySelector("#ft2out"),
+        { yPercent: 50, opacity: 0, scale: 2 },
+        { yPercent: 0, opacity: 1, scale: 1 },
+        0
+      );
+    });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#third",
+          start: "top top",
+          end: () => "+=100%",
+          scrub: true,
+          pin: true,
+          pinSpacing: true,
+          markers: true,
+        },
+        defaults: { ease: Power1.easeInOut },
+      })
+      .fromTo("#ft2in", { yPercent: 100 }, { yPercent: 0 })
+      .fromTo("#img2", { yPercent: -100 }, { yPercent: 0 }, 0);
+  }, []);
   return (
-    <div className="w-full bg-green py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div id="third" className="relative w-full bg-green py-16 sm:py-24">
+      <div id="text2" className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h1>
             <span className="bg-white invert text-black">{"p -> q,"}</span>
@@ -64,14 +107,18 @@ export default function FeatureThree() {
           </h2>
         </div>
       </div>
-      <div className="relative overflow-hidden pt-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-4 border-dashed rounded-2xl bg-black/40">
-          <div className="h-[30rem]" />
-          <div className="relative" aria-hidden="true">
-            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-green pt-[7%]" />
-          </div>
+      <div
+        id="ft2out"
+        className="relative overflow-hidden mt-16 h-[30rem] max-w-6xl w-full mx-auto rounded-2xl ring-1 ring-offset-8 border-dashed ring-black/20 ring-offset-green/50 bg-navy shadow-lg"
+      >
+        <div id="ft2in" className="absolute inset-0 overflow-hidden">
+          <div
+            id="img2"
+            className=" absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-center"
+          />
         </div>
       </div>
+
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
         <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
           {features.map((feature) => (
