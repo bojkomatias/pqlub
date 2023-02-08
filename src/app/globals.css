@@ -7,3 +7,7 @@
     @apply text-6xl font-serif font-black -skew-y-2 mb-10 -ml-6;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

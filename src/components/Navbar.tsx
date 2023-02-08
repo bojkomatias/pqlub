@@ -17,9 +17,11 @@ export default function Navbar() {
         <h1 className="px-24 flex items-center h-full drop-shadow flex-grow ">
           pqlub
         </h1>
-        <h2 className="bg-black uppercase hover:lowercase text-orange hover:font-serif hover:bg-green hover:tracking-wider hover:text-2xl transition text-xl px-1 cursor-pointer">
-          Got something in mind?
-        </h2>
+        <a href="#cta">
+          <h2 className="bg-black uppercase hover:lowercase text-orange hover:font-serif hover:bg-green hover:tracking-wider hover:text-2xl transition text-xl px-1 cursor-pointer">
+            Got something in mind?
+          </h2>
+        </a>
         {isOpen ? (
           <button
             type="button"
