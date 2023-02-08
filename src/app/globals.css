@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-6xl font-serif font-black -skew-y-2 mb-10 -ml-6;
+    @apply text-4xl md:text-6xl font-serif font-black -skew-y-2 mb-10 -ml-6;
   }
 }
 

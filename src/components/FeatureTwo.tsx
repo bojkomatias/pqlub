@@ -1,6 +1,54 @@
+"use client";
+
+import gsap, { Power2, Power1 } from "gsap";
+import { useEffect } from "react";
+
 export default function FeatureTwo() {
+  useEffect(() => {
+    gsap.utils.toArray("#second").forEach((section: any) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top center",
+          end: () => "-=20+=" + section.offsetWidth / 2,
+          scrub: true,
+          anticipatePin: 1,
+          // once: true,
+        },
+        defaults: { ease: Power2.easeInOut },
+      });
+      tl.fromTo(
+        section.querySelector("#text1"),
+        { xPercent: 50, scale: 1.2 },
+        { xPercent: 0, scale: 1 }
+      ).fromTo(
+        section.querySelector("#ft1out"),
+        { xPercent: -100, yPercent: -40, opacity: 0, scale: 2 },
+        { xPercent: 0, yPercent: 0, opacity: 1, scale: 1 },
+        0
+      );
+    });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#second",
+          start: "center center",
+          end: () => "+=110%",
+          scrub: true,
+          pin: true,
+          pinSpacing: true,
+          markers: true,
+        },
+        defaults: { ease: Power1.easeInOut },
+      })
+      .fromTo("#ft1in", { yPercent: -100 }, { yPercent: 0 })
+      .fromTo("#img1", { yPercent: 100 }, { yPercent: 0 }, 0);
+  }, []);
   return (
-    <div className="w-full relative isolate overflow-hidden bg-gradient-to-tl from-black to-navy">
+    <div
+      id="second"
+      className="overflow-hidden w-full h-screen relative isolate bg-gradient-to-tl from-black to-navy"
+    >
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -54,22 +102,11 @@ export default function FeatureTwo() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8">
-        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <div className="mt-24 sm:mt-32 lg:mt-16">
-            <a href="#" className="inline-flex space-x-6">
-              <span className="rounded-full bg-green/10 px-3 py-1 text-sm font-semibold leading-6 text-white ring-1 ring-inset ring-green/20">
-                What&apos;s new
-              </span>
-              <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
-                <span>Just shipped v1.0</span>
-                <ChevronRightIcon
-                  className="h-5 w-5 text-gray-500"
-                  aria-hidden="true"
-                />
-              </span>
-            </a>
-          </div>
+      <div className="relative mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8">
+        <div
+          id="text1"
+          className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8"
+        >
           <h1 className="mt-10 text-white">
             Deploy to the cloud with confidence
           </h1>
@@ -79,26 +116,23 @@ export default function FeatureTwo() {
             fugiat aliqua.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-green px-3.5 py-1.5 text-base font-semibold leading-7 text-navy shadow-sm hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-            >
-              Get started
-            </a>
-            <a
-              href="#"
-              className="text-base font-semibold leading-7 text-white"
-            >
-              Learn more <span aria-hidden="true">→</span>
-            </a>
+            <h2 className="hover:bg-orange border-black text-black py-2 uppercase border-2 transition-bg duration-500 ease-in-out transform hover:text-white hover:border-black hover:lowercase hover:font-serif bg-green hover:tracking-wider hover:text-2xl transition text-xl cursor-pointer px-4">
+              Budget your idea
+            </h2>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none border-4 border-dashed w-[76rem] rounded-2xl bg-black/40"></div>
+        <div
+          id="ft1out"
+          className="relative overflow-hidden mx-auto mt-16 flex sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32 bg-black/10 backdrop-saturate-0 backdrop-contrast-200 rounded-2xl ring-1 ring-offset-8 ring-teal/20 ring-offset-navy/50 shadow-white/10 shadow-xl max-w-3xl flex-none sm:max-w-5xl w-[76rem] h-[40rem]"
+        >
+          <div id="ft1in" className="absolute inset-0 overflow-hidden">
+            <div
+              id="img1"
+              className=" absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-center"
+            />
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-import { ChevronRightIcon } from "@heroicons/react/20/solid";

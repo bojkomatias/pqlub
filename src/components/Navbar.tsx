@@ -11,14 +11,16 @@ export default function Navbar() {
   return (
     <>
       <div
-        className="h-20 top-2 w-full fixed inset-0 flex items-center z-20
+        className="px-4 md:px-12 xl:px-24 h-20 w-full fixed inset-0 flex items-center z-20 
       "
       >
-        <h1 className="px-24 flex items-center h-full drop-shadow flex-grow ">
-          pqlub
+        <h1 className="mt-8 ml-6 md:ml-0 flex items-center h-full drop-shadow">
+          p<span className="text-3xl mt-12 -mx-3">{"->"}</span>
+          qlub
         </h1>
-        <a href="#cta">
-          <h2 className="bg-black uppercase hover:lowercase text-orange hover:font-serif hover:bg-green hover:tracking-wider hover:text-2xl transition text-xl px-1 cursor-pointer">
+        <span className="flex-grow" />
+        <a href="#cta" className="hidden md:block">
+          <h2 className="hover:bg-orange border-black text-black py-2 uppercase border-2 transition-bg duration-500 ease-in-out transform hover:text-white hover:border-black hover:lowercase  hover:font-serif bg-green hover:tracking-wider hover:text-2xl transition text-xl cursor-pointer px-4 mr-6 ">
             Got something in mind?
           </h2>
         </a>
@@ -26,18 +28,18 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen(false)}
-            className="outline-0 m-12 group uppercase flex text-white items-center gap-2 text-xl font-light hover:text-orange"
+            className="outline-0 group uppercase flex text-white items-center gap-2 text-xl font-light hover:text-orange"
           >
-            Close
+            <span className="hidden md:block">close</span>
             <XMarkIcon className="h-8 w-8 stroke-green group-hover:stroke-orange" />
           </button>
         ) : (
           <button
             type="button"
             onClick={() => setIsOpen(true)}
-            className="outline-0 m-12 group uppercase flex text-white items-center gap-2 text-xl font-light hover:text-orange"
+            className="outline-0 group uppercase flex text-white items-center gap-2 text-xl font-light hover:text-orange"
           >
-            Menu
+            <span className="hidden md:block">menu</span>
             <Bars3Icon className="h-8 w-8 stroke-green group-hover:stroke-orange" />
           </button>
         )}
