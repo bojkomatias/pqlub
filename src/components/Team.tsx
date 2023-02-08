@@ -6,6 +6,7 @@ interface TeamMember {
   shortName: string;
   role: string;
   website: string;
+  image?: string;
 }
 
 const TEAM_DATA: TeamMember[] = [
@@ -14,25 +15,28 @@ const TEAM_DATA: TeamMember[] = [
     shortName: "amilcar",
     role: "Co Founder / CTO",
     website: "amilcarrey.ar",
+    image: "amilcar.jpeg"
   },
   {
     name: "Matias Bojko",
     shortName: "mati",
     role: "Co Founder / CEO",
     website: "matiasbojko.com",
+    image: "mati.jpeg"
   },
   {
     name: "Nicolas Horn",
     shortName: "nico",
     role: "Co Founder / CFO",
     website: "nicohorn.com",
+    image: "nico.jpeg"
   },
 ];
 
 export default function Team() {
   const memberDetails = ({
     name = "default",
-    shortName,
+    image,
     role,
     website,
   }: TeamMember) => {
@@ -42,7 +46,7 @@ export default function Team() {
           className={`rounded-full border-4 border-dashed h-48 w-48`}
         >
           <Image
-            src={`/images/default.jpeg`}
+            src={`/images/${image}`}
             width={200}
             height={200}
             className={`aspect-square w-full rounded-full object-cover`}
