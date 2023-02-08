@@ -4,7 +4,6 @@ import Image from "next/image";
 
 interface TeamMember {
   name: string;
-  image: string;
   role: string;
   website: string;
   image?: string;
@@ -13,21 +12,18 @@ interface TeamMember {
 const TEAM_DATA: TeamMember[] = [
   {
     name: "Amilcar Rey",
-    image: "/images/mati.png",
     role: "Co Founder / CTO",
     website: "amilcarrey.ar",
     image: "amilcar.jpeg",
   },
   {
     name: "Matias Bojko",
-    image: "/images/mati.png",
     role: "Co Founder / CEO",
     website: "matiasbojko.com",
-    image: "mati.jpeg",
+    image: "mati.png",
   },
   {
     name: "Nicolas Horn",
-    image: "/images/mati.png",
     role: "Co Founder / CFO",
     website: "nicohorn.com",
     image: "nicolas.jpg",
