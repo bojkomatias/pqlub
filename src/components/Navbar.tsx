@@ -11,12 +11,16 @@ export default function Navbar() {
   return (
     <>
       <div
-        className="h-14 top-2 w-full fixed  inset-0 flex items-center z-20
+        className="h-20 top-2 w-full fixed inset-0 flex items-center z-20
       "
       >
-        <h1 className="px-24 flex items-center h-full flex-grow">pqlub</h1>
+        <h1 className="px-24 flex items-center h-full drop-shadow flex-grow ">
+          pqlub
+        </h1>
         <a href="#cta">
-          <h2 className="text-3xl px-1 cursor-pointer">Got something in mind?</h2>
+          <h2 className="bg-black uppercase hover:lowercase text-orange hover:font-serif hover:bg-green hover:tracking-wider hover:text-2xl transition text-xl px-1 cursor-pointer">
+            Got something in mind?
+          </h2>
         </a>
         {isOpen ? (
           <button
