@@ -6,6 +6,9 @@
   h1 {
     @apply text-4xl md:text-6xl font-serif font-black -skew-y-2 mb-10 -ml-6;
   }
+  .font-outline-2 {
+    -webkit-text-stroke: .00001px #BFDB38;
+  }
 }
 
 html {
