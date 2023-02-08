@@ -59,7 +59,7 @@ export default function FeatureThree() {
           end: () => "+=100+=" + section.offsetWidth,
           scrub: true,
           anticipatePin: 1,
-          // once: true,
+          once: true,
         },
         defaults: { ease: Power2.easeInOut },
       });
@@ -95,6 +95,7 @@ export default function FeatureThree() {
           start: "top center",
           end: () => "+=40%",
           scrub: true,
+          once: true,
         },
         defaults: { ease: Power1.easeInOut },
       })
@@ -112,11 +113,11 @@ export default function FeatureThree() {
       <svg
         viewBox="0 0 1108 632"
         aria-hidden="true"
-        className="absolute top-10 left-[calc(50%-4rem)] -z-10 w-[69.25rem] max-w-none transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
+        className="absolute top-10 left-[calc(50%-4rem)] -z-10 w-[69.25rem] max-w-none transform-gpu blur-[100px] sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
       >
         <path
           fill="url(#175c433f-44f6-4d59-93f0-c5c51ad5566d)"
-          fillOpacity=".2"
+          fillOpacity=".3"
           d="M235.233 402.609 57.541 321.573.83 631.05l234.404-228.441 320.018 145.945c-65.036-115.261-134.286-322.756 109.01-230.655C968.382 433.026 1031 651.247 1092.23 459.36c48.98-153.51-34.51-321.107-82.37-385.717L810.952 324.222 648.261.088 235.233 402.609Z"
         />
         <defs>
@@ -128,7 +129,7 @@ export default function FeatureThree() {
             y2="638.714"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="black" />
+            <stop stopColor="#BFDB38" />
             <stop offset={1} stopColor="#BFDB38" />
           </linearGradient>
         </defs>
@@ -151,7 +152,7 @@ export default function FeatureThree() {
         </div>
         <div
           id="ft2out"
-          className="relative overflow-hidden mt-16 h-96 max-w-6xl -mx-1 lg:mx-auto lg:rounded-2xl ring-1 ring-offset-8 border-dashed ring-black/20 ring-offset-green/50 bg-navy shadow-lg"
+          className="relative overflow-hidden mt-16 h-96 max-w-6xl -mx-1 lg:mx-auto lg:rounded-2xl ring-1 ring-offset-8 border-dashed ring-gray-300/80 ring-offset-green/30 bg-navy shadow-2xl shadow-green/50"
         >
           <div id="ft2in" className="absolute inset-0 overflow-hidden">
             <div

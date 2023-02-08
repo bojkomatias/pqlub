@@ -1,9 +1,10 @@
+"use client";
 import { LinkIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 
 interface TeamMember {
   name: string;
-  shortName: string;
+  image: string;
   role: string;
   website: string;
 }
@@ -11,19 +12,19 @@ interface TeamMember {
 const TEAM_DATA: TeamMember[] = [
   {
     name: "Amilcar Rey",
-    shortName: "amilcar",
+    image: "/images/mati.png",
     role: "Co Founder / CTO",
     website: "amilcarrey.ar",
   },
   {
     name: "Matias Bojko",
-    shortName: "mati",
+    image: "/images/mati.png",
     role: "Co Founder / CEO",
     website: "matiasbojko.com",
   },
   {
     name: "Nicolas Horn",
-    shortName: "nico",
+    image: "/images/mati.png",
     role: "Co Founder / CFO",
     website: "nicohorn.com",
   },
@@ -32,17 +33,15 @@ const TEAM_DATA: TeamMember[] = [
 export default function Team() {
   const memberDetails = ({
     name = "default",
-    shortName,
+    image,
     role,
     website,
   }: TeamMember) => {
     return (
       <div className="flex flex-col items-center justify-around gap-4">
-        <div
-          className={`rounded-full border-4 border-dashed h-48 w-48`}
-        >
+        <div className={`rounded-full border-4 border-dashed h-48 w-48`}>
           <Image
-            src={`/images/default.jpeg`}
+            src={image}
             width={200}
             height={200}
             // className={`object-contain`}
@@ -70,7 +69,7 @@ export default function Team() {
           <h3>We are a group of engineers, who love solving problems.</h3>
         </div>
         <div className="mx-auto mt-8 max-w-7xl px-6 lg:px-8 w-full border-4 border-dashed rounded-2xl">
-          <div className="h-[35rem]" />
+          <div className="h-[35rem] bg-[url('https://basement.studio/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fobjective-02.8c048b12.jpg&w=3840&q=75')] bg-cover" />
         </div>
 
         <div className="w-full flex flex-col md:flex-row items-center justify-around my-24">
