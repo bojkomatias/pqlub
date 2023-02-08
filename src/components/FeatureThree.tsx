@@ -1,48 +1,48 @@
 import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
+  CogIcon,
+  CommandLineIcon,
+  RocketLaunchIcon,
+  ServerStackIcon,
+  WindowIcon,
+  ArrowTrendingUpIcon,
 } from "@heroicons/react/20/solid";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Tech consulting.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-    icon: CloudArrowUpIcon,
+      "We will help your business stay ahead in technology and reach their goals by assessing current systems, identifying areas for improvement, and recommending solutions.",
+    icon: RocketLaunchIcon,
   },
   {
-    name: "SSL certificates.",
+    name: "Team growth.",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: LockClosedIcon,
+      "We will build and expand successful teams by hiring top talent, training and developing employees for your business.",
+    icon: ArrowTrendingUpIcon,
   },
   {
-    name: "Simple queues.",
+    name: "Software engineering.",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
-    icon: ArrowPathIcon,
+      "We cover the entire development lifecycle and create custom solutions that meet clients' unique needs to ensure project success.",
+    icon: CommandLineIcon,
   },
   {
-    name: "Advanced security.",
+    name: "UI/UX design.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-    icon: FingerPrintIcon,
+      "We will create engaging and intuitive user experiences for software and websites through wireframing, prototyping, and visually stunning designs.",
+    icon: WindowIcon,
   },
   {
-    name: "Powerful API.",
+    name: "DevOps and maintenance.",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: Cog6ToothIcon,
+      "We integrate development and operations teams, automate processes, and provide ongoing support to ensure the reliability and performance of software systems.",
+    icon: ServerStackIcon,
   },
   {
-    name: "Database backups.",
+    name: "Systems engineering.",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. ",
-    icon: ServerIcon,
+      "We will provide end-to-end solutions for complex systems, improving efficiency and effectiveness through assessment, recommendations, and integration. ",
+    icon: CogIcon,
   },
 ];
 
