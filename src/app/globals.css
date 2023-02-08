@@ -4,12 +4,6 @@
 
 @layer base {
   h1 {
-    @apply text-7xl font-serif -rotate-2 mb-10 -ml-6 text-green;
-  }
-  h2 {
-    @apply text-4xl uppercase bg-black w-fit text-orange;
-  }
-  h3 {
-    @apply text-2xl font-serif mt-2;
+    @apply text-6xl font-serif font-black -skew-y-2 mb-10 -ml-6;
   }
 }
