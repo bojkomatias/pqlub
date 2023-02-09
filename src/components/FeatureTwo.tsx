@@ -46,7 +46,7 @@ export default function FeatureTwo() {
   return (
     <div
       id="second"
-      className="overflow-hidden w-screen h-screen relative isolate bg-gradient-to-tl from-black to-navy"
+      className="overflow-hidden w-full h-screen relative isolate bg-gradient-to-tl from-black to-navy"
     >
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"

@@ -24,7 +24,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="flex h-full max-w-2xl lg:max-w-xl text-white bg-navy">
+      <body className="flex h-full w-screen text-white bg-navy">
         <Navbar /> {children}
       </body>
     </html>
