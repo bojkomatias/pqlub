@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
   "typescript.tsdk": "node_modules/.pnpm/typescript@4.9.4/node_modules/typescript/lib",
-=======
-  "typescript.tsdk": "node_modules\\typescript\\lib",
->>>>>>> 888fc8cab8913192e429a6273cd9ab0945b53ee1
   "typescript.enablePromptUseWorkspaceTsdk": true
 }
