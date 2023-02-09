@@ -27,12 +27,16 @@ module.exports = {
         slide: {
           '100%': { transform: 'translateX(-50%)' },
         },
+        rot3d: {
+          '50%': { transform: 'rotate3d(0, 1, 0, 180deg)' },
+          '100%': { transform: 'rotate3d(0, 1, 0, 360deg)' }
+        }
 
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',
-        'slide': 'slide 20s linear infinite'
-
+        'slide': 'slide 20s linear infinite',
+        '3d': 'rot3d 5s linear infinite'
       }
     },
   },

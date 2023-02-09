@@ -69,6 +69,7 @@ export default function Team() {
           end: () => "-=20+=" + section.offsetWidth,
           scrub: true,
           anticipatePin: 1,
+          once: true,
         },
         defaults: { ease: Power2.easeInOut },
       });
@@ -88,7 +89,7 @@ export default function Team() {
         scrollTrigger: {
           trigger: "#four",
           start: "top top",
-          end: () => "+=80%",
+          end: () => "+=50%",
           scrub: true,
           pin: true,
           pinSpacing: true,

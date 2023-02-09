@@ -12,8 +12,8 @@ export default function FeatureTwo() {
           start: "top center",
           end: () => "-=20+=" + section.offsetWidth / 2,
           scrub: true,
-          anticipatePin: 1,
           once: true,
+          anticipatePin: 1,
         },
         defaults: { ease: Power2.easeInOut },
       });
@@ -33,10 +33,11 @@ export default function FeatureTwo() {
         scrollTrigger: {
           trigger: "#second",
           start: "center center",
-          end: () => "+=110%",
+          end: () => "+=20%",
           scrub: true,
           pin: true,
           pinSpacing: true,
+          once: true,
         },
         defaults: { ease: Power1.easeInOut },
       })

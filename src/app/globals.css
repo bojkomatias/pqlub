@@ -10,7 +10,3 @@
     -webkit-text-stroke: 0.00001px #bfdb38;
   }
 }
-
-html {
-  scroll-behavior: smooth;
-}

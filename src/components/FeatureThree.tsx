@@ -56,7 +56,7 @@ export default function FeatureThree() {
         scrollTrigger: {
           trigger: section,
           start: "top bottom",
-          end: () => "+=100+=" + section.offsetWidth,
+          end: () => "-=100+=" + section.offsetWidth / 2,
           scrub: true,
           anticipatePin: 1,
           once: true,
@@ -79,21 +79,17 @@ export default function FeatureThree() {
         scrollTrigger: {
           trigger: "#third",
           start: "top top",
-          end: () => "+=100%",
-          scrub: true,
-          pin: true,
-          pinSpacing: true,
         },
         defaults: { ease: Power1.easeInOut },
       })
-      .fromTo("#ft2in", { yPercent: 100 }, { yPercent: 0 })
-      .fromTo("#img2", { yPercent: -100 }, { yPercent: 0 }, 0);
+      .fromTo("#ft2in", { yPercent: 100 }, { yPercent: 0, duration: 1.5 })
+      .fromTo("#img2", { yPercent: -100 }, { yPercent: 0, duration: 1.5 }, 0);
     gsap
       .timeline({
         scrollTrigger: {
           trigger: "#ftsection",
           start: "top center",
-          end: () => "+=40%",
+          end: () => "+=30%",
           scrub: true,
           once: true,
         },
