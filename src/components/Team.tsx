@@ -28,7 +28,7 @@ const TEAM_DATA: TeamMember[] = [
     name: "Nicolas Horn",
     role: "Co Founder / CFO",
     website: "nicohorn.com",
-    image: "nicolas.jpg",
+    image: "nicolas.png",
   },
 ];
 const memberDetails = ({
