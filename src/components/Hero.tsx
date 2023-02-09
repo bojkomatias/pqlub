@@ -41,7 +41,7 @@ export default function SectionOne() {
       >
         <div
           id="inner"
-          className="w-full h-full justify-center flex items-center bg-1 bg-no-repeat bg-center absolute inset-0"
+          className="w-full h-full justify-center flex items-center bg-1 bg-no-repeat bg-center lg:bg-cover absolute inset-0"
         >
           <p className="max-w-4xl text-center mx-auto z-10 drop-shadow text-4xl lg:text-7xl uppercase leading-[5rem]">
             into a
@@ -55,7 +55,7 @@ export default function SectionOne() {
         </div>
       </div>
       <div className="absolute inset-0 overflow-hidden w-full justify-center flex items-center bg-cover bg-gradient-to-b from-transparent via-teal/10 to-transparent">
-        <div className="bg-2 bg-no-repeat bg-center absolute inset-0 opacity-50" />
+        <div className="bg-2 bg-no-repeat bg-center lg:bg-cover absolute inset-0 opacity-50" />
         <p className="max-w-4xl mx-auto text-center drop-shadow text-4xl lg:text-7xl uppercase leading-[5rem]">
           we turn your <br />
           <span className="px-16 font-bold tracking-widest font-serif text-black bg-[url('/brush2.svg')] bg-cover bg-center">
