@@ -2,7 +2,7 @@
 import { LinkIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { useEffect } from "react";
-import { gsap, Power2, Power1 } from "gsap";
+import { gsap, Power2 } from "gsap";
 
 interface TeamMember {
   name: string;
@@ -88,23 +88,19 @@ export default function Team() {
       .timeline({
         scrollTrigger: {
           trigger: "#four",
-          start: "top top",
-          end: () => "+=50%",
-          scrub: true,
-          pin: true,
-          pinSpacing: true,
+          start: "top-=200 top",
         },
-        defaults: { ease: Power1.easeInOut },
+        defaults: { ease: Power2.easeIn },
       })
       .fromTo(
         "#teamin",
         { xPercent: -100, yPercent: -100 },
-        { xPercent: 0, yPercent: 0 }
+        { xPercent: 0, yPercent: 0, duration: 1 }
       )
       .fromTo(
         "#teampic",
         { xPercent: 100, yPercent: 100 },
-        { xPercent: 0, yPercent: 0 },
+        { xPercent: 0, yPercent: 0, duration: 1 },
         0
       );
   }, []);
@@ -124,11 +120,11 @@ export default function Team() {
         >
           <div
             id="teamin"
-            className="absolute inset-0 overflow-hidden rounded-2xl"
+            className="absolute inset-0 overflow-hidden rounded-2xl ring-8 ring-white/40"
           >
             <div
               id="teampic"
-              className=" absolute-inset-0 rounded-2xl h-full bg-[url('https://basement.studio/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fobjective-02.8c048b12.jpg&w=3840&q=75')] bg-cover bg-left-top"
+              className="ring=8 ring-white/40 absolute-inset-0 rounded-2xl h-full bg-[url('https://basement.studio/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fobjective-02.8c048b12.jpg&w=3840&q=75')] bg-cover bg-left-top"
             />
           </div>
         </div>

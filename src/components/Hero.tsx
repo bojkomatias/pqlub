@@ -1,8 +1,7 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { gsap, Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { motion, useScroll } from "framer-motion";
 
 export default function SectionOne() {
   useEffect(() => {
@@ -12,7 +11,7 @@ export default function SectionOne() {
         scrollTrigger: {
           trigger: section,
           start: "center center",
-          end: () => "+=" + section.offsetWidth,
+          end: () => "+=" + section.offsetWidth / 2,
           scrub: true,
           pin: true,
           pinSpacing: true,
@@ -22,12 +21,12 @@ export default function SectionOne() {
       });
       tl.fromTo(
         section.querySelector("#outer"),
-        { xPercent: -100, x: 0 },
-        { xPercent: 0 }
+        { yPercent: -100, x: 0 },
+        { yPercent: 0 }
       ).fromTo(
         section.querySelector("#inner"),
-        { xPercent: 100, x: 0 },
-        { xPercent: 0 },
+        { yPercent: 100, x: 0 },
+        { yPercent: 0 },
         0
       );
     });
@@ -37,11 +36,11 @@ export default function SectionOne() {
     <div id="first" className="h-screen w-screen bg-navy">
       <div
         id="outer"
-        className="bg-teal absolute inset-x-0 inset-y-60 overflow-hidden w-full z-10 justify-center flex items-center"
+        className=" ring-2 ring-green/50 bg-teal absolute inset-x-0 inset-y-0 overflow-hidden w-full z-10 justify-center flex items-center"
       >
         <div
           id="inner"
-          className="w-full h-full justify-center flex items-center bg-1 bg-no-repeat bg-center lg:bg-cover absolute inset-0"
+          className=" ring-2 ring-green/50 w-full h-full justify-center flex items-center bg-1 bg-no-repeat bg-center lg:bg-cover absolute inset-0"
         >
           <p className="max-w-4xl text-center mx-auto z-10 drop-shadow text-4xl lg:text-7xl uppercase leading-[5rem]">
             into a

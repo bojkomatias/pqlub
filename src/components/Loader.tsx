@@ -1,6 +1,6 @@
 "use client";
 
-import { gsap, Power3 } from "gsap";
+import { gsap, Power2 } from "gsap";
 import { useEffect } from "react";
 
 export default function Loader() {
@@ -8,7 +8,7 @@ export default function Loader() {
     gsap.fromTo(
       "#load",
       { yPercent: 0 },
-      { yPercent: -100, duration: 0.4, delay: 1.3, ease: Power3.easeIn }
+      { yPercent: -100, duration: 0.4, delay: 1.3, ease: Power2.easeIn }
     );
     gsap.fromTo(
       "#loadtxt",
@@ -18,7 +18,7 @@ export default function Loader() {
         opacity: 1,
         duration: 1.6,
         delay: 0,
-        ease: Power3.easeOut,
+        ease: Power2.easeOut,
       }
     );
     gsap.fromTo(
@@ -30,7 +30,7 @@ export default function Loader() {
         xPercent: 0,
         duration: 0.2,
         delay: 0.7,
-        ease: Power3.easeIn,
+        ease: Power2.easeIn,
       }
     );
     gsap.fromTo(
@@ -40,7 +40,7 @@ export default function Loader() {
         backgroundColor: "#BFDB38",
         duration: 0.3,
         delay: 0.8,
-        ease: Power3.easeIn,
+        ease: Power2.easeIn,
       }
     );
     gsap.fromTo(
@@ -52,7 +52,7 @@ export default function Loader() {
         scale: 1,
         duration: 0.4,
         delay: 0,
-        ease: Power3.easeInOut,
+        ease: Power2.easeInOut,
       }
     );
     gsap.fromTo(
@@ -65,7 +65,7 @@ export default function Loader() {
         xPercent: 0,
         duration: 0.4,
         delay: 0.3,
-        ease: Power3.easeInOut,
+        ease: Power2.easeInOut,
       }
     );
   }, []);

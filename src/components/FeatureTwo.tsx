@@ -1,6 +1,6 @@
 "use client";
 
-import gsap, { Power2, Power1 } from "gsap";
+import gsap, { Power2 } from "gsap";
 import { useEffect } from "react";
 
 export default function FeatureTwo() {
@@ -10,7 +10,7 @@ export default function FeatureTwo() {
         scrollTrigger: {
           trigger: section,
           start: "top center",
-          end: () => "-=20+=" + section.offsetWidth / 2,
+          end: "top top",
           scrub: true,
           once: true,
           anticipatePin: 1,
@@ -32,22 +32,17 @@ export default function FeatureTwo() {
       .timeline({
         scrollTrigger: {
           trigger: "#second",
-          start: "center center",
-          end: () => "+=20%",
-          scrub: true,
-          pin: true,
-          pinSpacing: true,
-          once: true,
+          start: "top-=200 top",
         },
-        defaults: { ease: Power1.easeInOut },
+        defaults: { ease: Power2.easeIn },
       })
-      .fromTo("#ft1in", { yPercent: -100 }, { yPercent: 0 })
-      .fromTo("#img1", { yPercent: 100 }, { yPercent: 0 }, 0);
+      .fromTo("#ft1in", { yPercent: -100 }, { yPercent: 0, duration: 1.3 })
+      .fromTo("#img1", { yPercent: 100 }, { yPercent: 0, duration: 1.3 }, 0);
   }, []);
   return (
     <div
       id="second"
-      className="overflow-hidden w-full h-screen relative isolate bg-gradient-to-tl from-black to-navy"
+      className="overflow-hidden w-full h-fit relative isolate bg-gradient-to-tl from-black to-navy"
     >
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -102,10 +97,10 @@ export default function FeatureTwo() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="flex flex-col md:flex-row mx-auto max-w-7xl px-6 items-center sm:pb-32 lg:flex lg:py-40 lg:px-8">
+      <div className="flex flex-col md:flex-row mx-auto max-w-7xl px-6 sm:py-32 lg:flex lg:py-40 lg:px-8">
         <div
           id="text1"
-          className="flex flex-col justify-center items-center mt-6 md:justify-start mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 px-4"
+          className="flex flex-col mt-6 md:justify-start mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 px-4"
         >
           <h1 className="mt-10 text-black font-outline-2">
             Deploy to the cloud with confidence
@@ -125,10 +120,13 @@ export default function FeatureTwo() {
           id="ft1out"
           className="relative overflow-hidden mx-auto mt-16 flex sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32 bg-black/10 backdrop-saturate-0 backdrop-contrast-200 rounded-2xl ring-1 ring-offset-8 ring-teal/20 ring-offset-navy/50 shadow-white/10 shadow-xl max-w-3xl flex-none sm:max-w-5xl w-[76rem] h-[40rem]"
         >
-          <div id="ft1in" className="absolute inset-0 overflow-hidden">
+          <div
+            id="ft1in"
+            className="absolute inset-0 overflow-hidden ring-8 ring-teal/50"
+          >
             <div
               id="img1"
-              className=" absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-center"
+              className="ring-8 ring-teal/50 absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-center"
             />
           </div>
         </div>

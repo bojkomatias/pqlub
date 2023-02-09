@@ -46,7 +46,7 @@ const features = [
   },
 ];
 
-import gsap, { Power2, Power1 } from "gsap";
+import gsap, { Power2 } from "gsap";
 import { useEffect } from "react";
 
 export default function FeatureThree() {
@@ -55,8 +55,8 @@ export default function FeatureThree() {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top bottom",
-          end: () => "-=100+=" + section.offsetWidth / 2,
+          start: "top center",
+          end: "top top",
           scrub: true,
           anticipatePin: 1,
           once: true,
@@ -78,22 +78,31 @@ export default function FeatureThree() {
       .timeline({
         scrollTrigger: {
           trigger: "#third",
-          start: "top top",
+          start: "top-=200 top",
         },
-        defaults: { ease: Power1.easeInOut },
+        defaults: { ease: Power2.easeIn },
       })
-      .fromTo("#ft2in", { yPercent: 100 }, { yPercent: 0, duration: 1.5 })
-      .fromTo("#img2", { yPercent: -100 }, { yPercent: 0, duration: 1.5 }, 0);
+      .fromTo(
+        "#ft2in",
+        { yPercent: 100, xPercent: -100 },
+        { yPercent: 0, xPercent: 0, duration: 1.1 }
+      )
+      .fromTo(
+        "#img2",
+        { yPercent: -100, xPercent: 100 },
+        { yPercent: 0, xPercent: 0, duration: 1.1 },
+        0
+      );
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: "#ftsection",
+          trigger: "#third",
           start: "top center",
-          end: () => "+=30%",
+          end: "center center",
           scrub: true,
           once: true,
         },
-        defaults: { ease: Power1.easeInOut },
+        defaults: { ease: Power2.easeInOut },
       })
       .fromTo(
         "#ftsection",
@@ -150,10 +159,13 @@ export default function FeatureThree() {
           id="ft2out"
           className="relative overflow-hidden mt-16 h-96 max-w-6xl -mx-1 lg:mx-auto lg:rounded-2xl ring-1 ring-offset-8 border-dashed ring-gray-300/80 ring-offset-green/30 bg-navy shadow-2xl shadow-green/50"
         >
-          <div id="ft2in" className="absolute inset-0 overflow-hidden">
+          <div
+            id="ft2in"
+            className="absolute inset-0 overflow-hidden ring-8 ring-green/30 rounded-2xl"
+          >
             <div
               id="img2"
-              className=" absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-left-top"
+              className="rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-left-top"
             />
           </div>
         </div>
