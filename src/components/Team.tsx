@@ -33,7 +33,7 @@ const TEAM_DATA: TeamMember[] = [
     lastName: "Horn",
     role: "Co Founder / CFO",
     website: "nicohorn.com",
-    image: "nicolas.jpg",
+    image: "nicolas.png",
   },
 ];
 const memberDetails = ({
@@ -125,7 +125,7 @@ export default function Team() {
         <div id="teamtxt" className="container z-10">
           <h1 className="text-black font-outline-2">the papirrines,</h1>
           <h2>The ones who do the crafting.</h2>
-          <h3>We are a group of engineers, who love solving problems.</h3>
+          <h3>We are a group of engineers who love solving problems.</h3>
         </div>
 
         <div

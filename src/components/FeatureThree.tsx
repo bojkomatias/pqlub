@@ -145,13 +145,13 @@ export default function FeatureThree() {
             <h1>
               <span className="bg-white invert text-black">{"p -> q,"}</span>
               <br />
-              as precision leads to quality results.
+              <p className="mt-4">turning projects into quality products.</p>
             </h1>
 
             <h2 className="mt-6 text-lg leading-8 text-gray-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis.
+              Our commitment to quality ensures every project is delivered with
+              precision and to the highest standards. Partner with us, quality
+              is rest assured.
             </h2>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function FeatureThree() {
           >
             <div
               id="img2"
-              className="rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-left-top"
+              className="rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('/dashboard.png')] bg-contain bg-top"
             />
           </div>
         </div>

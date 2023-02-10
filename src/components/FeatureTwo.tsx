@@ -103,12 +103,12 @@ export default function FeatureTwo() {
           className="flex flex-col mt-6 md:justify-start mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 px-4"
         >
           <h1 className="mt-10 text-black font-outline-2">
-            Deploy to the cloud with confidence
+            {"Let's work together"}
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+            Bring your visions to life with our team of engineers. We craft
+            solutions to make your project a reality, all within budget. Start
+            turning your ideas into reality with us now.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <h2 className="hover:bg-orange border-black text-black py-2 uppercase border-2 transition-bg duration-500 ease-in-out transform hover:text-white hover:border-black hover:lowercase hover:font-serif bg-green hover:tracking-wider hover:text-2xl transition text-xl cursor-pointer px-4">
@@ -126,7 +126,7 @@ export default function FeatureTwo() {
           >
             <div
               id="img1"
-              className="ring-8 ring-teal/50 absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-center"
+              className="ring-8 ring-teal/50 absolute-inset-0 h-full bg-[url('https://www.wendyzhou.se/ezoimgfmt/i0.wp.com/www.wendyzhou.se/blog/wp-content/uploads/2019/08/Financial.png?w=1600&ssl=1&ezimgfmt=ngcb1/notWebP')] bg-cover bg-contain"
             />
           </div>
         </div>
