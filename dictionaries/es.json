@@ -3,8 +3,10 @@
       "to-cta": "Got something in mind?"
    },
    "hero": {
-      "text-1": "asdasd",
-      "text-2": "asdasd"
+      "text1": "transformamos tu proyecto",
+      "specialWord1":"proyecto",
+      "text2": "en una pieza de calidad",
+      "specialWord2": "calidad"
    },
    "feature-2": {
       "title": "asdasd",

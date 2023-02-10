@@ -18,7 +18,7 @@ export default async function Home({
   return (
     <main className="w-full antialiased flex flex-col items-center">
       <Loader />
-      <Hero />
+      <Hero dictionary={dictionary.hero} />
       <Divider />
       <FeatureTwo />
       <FeatureThree />

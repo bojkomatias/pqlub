@@ -8,4 +8,4 @@ const dictionaries = {
   es: () => import('./es.json').then((module) => module.default),
 }
 
-export const getDictionary = async (locale: Locale) => dictionaries[locale]
+export const getDictionary = async (locale: Locale) => dictionaries[locale]()
