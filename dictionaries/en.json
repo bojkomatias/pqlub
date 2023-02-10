@@ -1,0 +1,54 @@
+{
+   "navbar": {
+      "to-cta": "Got something in mind?"
+   },
+   "hero": {
+      "text-1": "asdasd",
+      "text-2": "asdasd"
+   },
+   "feature-2": {
+      "title": "asdasd",
+      "subtitle": "asdasd",
+      "action": "BUDGET YOUR IDEA"
+   },
+   "feature-3": {
+      "implies": "as precision leads to quality results.",
+      "subtitle": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.",
+      "features": [
+         {
+            "name": "Tech consulting.",
+            "description": "We will help your business stay ahead in technology and reach their goals by assessing current systems, identifying areas for improvement, and recommending solutions."
+         },
+         {
+            "name": "Team growth.",
+            "description": "We will build and expand successful teams by hiring top talent, training and developing employees for your business."
+         },
+         {
+            "name": "Software engineering.",
+            "description": "We cover the entire development lifecycle and create custom solutions that meet clients unique needs to ensure project success."
+         },
+         {
+            "name": "UI/UX design.",
+            "description": "We will create engaging and intuitive user experiences for software and websites through wireframing, prototyping, and visually stunning designs."
+         },
+         {
+            "name": "DevOps and maintenance.",
+            "description": "We integrate development and operations teams, automate processes, and provide ongoing support to ensure the reliability and performance of software systems."
+         },
+         {
+            "name": "Systems engineering.",
+            "description": "We will provide end-to-end solutions for complex systems, improving efficiency and effectiveness through assessment, recommendations, and integration."
+         }
+      ]
+   },
+   "team": {
+      "title": "the papirrines",
+      "subtitle": "The ones who do the crafting. We are a group of engineers, who love solving problems."
+   },
+   "cta": {
+      "title": "Work with us",
+      "hey": "HEY YOU!",
+      "tell": "Tell us about your project",
+      "action": "NOW!"
+   }
+}

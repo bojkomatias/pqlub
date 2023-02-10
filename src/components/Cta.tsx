@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+'use client'
+import React, { useState } from "react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 

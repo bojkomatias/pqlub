@@ -44,7 +44,7 @@ const memberDetails = ({
   website,
 }: TeamMember) => {
   return (
-    <div className="flex flex-col items-center justify-around gap-3">
+    <div key={name} className="flex flex-col items-center justify-around gap-3">
       <div
         className={`rounded-full ring-white/20 ring-4 ring-offset-8 ring-offset-black h-48 w-48 mb-3`}
       >

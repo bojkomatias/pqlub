@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Lexend_Deca, Architects_Daughter } from "@next/font/google";
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
+import { i18n } from '../../i18n-config'
 
 const sans = Lexend_Deca({ subsets: ["latin"], variable: "--font-sans" });
 const handwritten = Architects_Daughter({
@@ -9,14 +10,20 @@ const handwritten = Architects_Daughter({
   variable: "--font-handwritten",
 });
 
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }))
+}
+
 export default function RootLayout({
   children,
+  params
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode,
+  params: { lang: string }
 }) {
   return (
     <html
-      lang="en"
+      lang={params.lang}
       className={`${sans.variable} ${handwritten.variable} font-sans`}
     >
       {/*
