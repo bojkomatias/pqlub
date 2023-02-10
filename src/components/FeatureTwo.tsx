@@ -126,7 +126,7 @@ export default function FeatureTwo() {
           >
             <div
               id="img1"
-              className="ring-8 ring-teal/50 absolute-inset-0 h-full bg-[url('https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero%404x.15e3a396.jpg&w=3840&q=75')] bg-cover bg-center"
+              className="ring-8 ring-teal/50 absolute-inset-0 h-full bg-[url('https://www.wendyzhou.se/ezoimgfmt/i0.wp.com/www.wendyzhou.se/blog/wp-content/uploads/2019/08/Financial.png?w=1600&ssl=1&ezimgfmt=ngcb1/notWebP')] bg-cover bg-contain"
             />
           </div>
         </div>
