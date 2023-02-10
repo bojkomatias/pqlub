@@ -145,13 +145,15 @@ export default function FeatureThree() {
             <h1>
               <span className="bg-white invert text-black">{"p -> q,"}</span>
               <br />
-              as precision leads to quality results.
+              <p className="mt-4">
+                bringing your projects to life with quality
+              </p>
             </h1>
 
             <h2 className="mt-6 text-lg leading-8 text-gray-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis.
+              Our commitment to quality ensures every project is delivered with
+              precision and to the highest standards. Partner with us, quality
+              is rest assured.
             </h2>
           </div>
         </div>
