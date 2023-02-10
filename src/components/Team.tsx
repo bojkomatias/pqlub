@@ -3,9 +3,11 @@ import { LinkIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { useEffect } from "react";
 import { gsap, Power2 } from "gsap";
+import Link from "next/link";
 
 interface TeamMember {
   name: string;
+  lastName: string;
   role: string;
   website: string;
   image?: string;
@@ -13,19 +15,22 @@ interface TeamMember {
 
 const TEAM_DATA: TeamMember[] = [
   {
-    name: "Amilcar Rey",
+    name: "Amilcar",
+    lastName: "Rey",
     role: "Co Founder / CTO",
     website: "amilcarrey.ar",
     image: "amilcar.jpeg",
   },
   {
-    name: "Matias Bojko",
+    name: "Matías",
+    lastName: "Bojko",
     role: "Co Founder / CEO",
     website: "matiasbojko.com",
     image: "mati.png",
   },
   {
-    name: "Nicolas Horn",
+    name: "Nicolás",
+    lastName: "Horn",
     role: "Co Founder / CFO",
     website: "nicohorn.com",
     image: "nicolas.jpg",
@@ -33,13 +38,16 @@ const TEAM_DATA: TeamMember[] = [
 ];
 const memberDetails = ({
   name = "default",
+  lastName,
   image,
   role,
   website,
 }: TeamMember) => {
   return (
-    <div className="flex flex-col items-center justify-around gap-4">
-      <div className={`rounded-full border-4 border-dashed h-48 w-48`}>
+    <div className="flex flex-col items-center justify-around gap-3">
+      <div
+        className={`rounded-full ring-white/20 ring-4 ring-offset-8 ring-offset-black h-48 w-48 mb-3`}
+      >
         <Image
           src={`/images/${image}`}
           width={200}
@@ -48,14 +56,20 @@ const memberDetails = ({
           alt={""}
         />
       </div>
-      <p className="font-serif text-3xl">{name}</p>
-      <span className="bg-black px-2 text-orange uppercase text-xl">
+      <p className="font-sans font-light text-3xl -rotate-1">
+        {name} <span className="font-bold">{lastName}</span>
+      </p>
+      <span className="bg-black px-2 text-orange text-xs self-end -mt-3">
         {role}
       </span>
-      <span className="mb-4 rounded-full px-4 py-1 bg-gray-300/20 ring-1 ring-gray-300/60 flex w-fit items-center gap-3">
+      <Link
+        href={`https://${website}`}
+        target={"_blank"}
+        className="mb-4 rounded-full px-4 py-1 bg-white/5 hover:bg-white/20 ring-1 ring-white/10 hover:ring-white/30 flex w-fit items-center gap-3"
+      >
         <LinkIcon className="h-4 w-4 mt-px" />
         {website}
-      </span>
+      </Link>
     </div>
   );
 };
@@ -124,7 +138,7 @@ export default function Team() {
           >
             <div
               id="teampic"
-              className="ring=8 ring-white/40 absolute-inset-0 rounded-2xl h-full bg-[url('https://basement.studio/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fobjective-02.8c048b12.jpg&w=3840&q=75')] bg-cover bg-left-top"
+              className="ring=8 ring-white/40 absolute-inset-0 rounded-2xl h-full bg-papirrines bg-cover bg-center"
             />
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function Navbar() {
       "
       >
         <h1 className="mt-8 ml-6 md:ml-0 flex items-center h-full drop-shadow">
-          p<span className="text-3xl mt-12 -mx-3">{"->"}</span>
+          p<span className="text-3xl mt-12 -mx-3 text-green">{"->"}</span>
           qlub
         </h1>
         <span className="flex-grow" />

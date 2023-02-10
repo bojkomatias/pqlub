@@ -35,7 +35,7 @@ const Cta = () => {
   return (
     <div
       id="cta"
-      className="relative transition ease-in-out duration-200 h-screen w-full isolate overflow-hidden bg-black"
+      className="relative transition ease-in-out duration-200 h-screen w-full isolate overflow-hidden bg-black pointer-events-none"
     >
       <div className="absolute inset-x-0 bottom-20">
         <div className="flex flex-col justify-center items-center container mx-auto">
@@ -45,7 +45,7 @@ const Cta = () => {
         </div>
 
         <div
-          className="px-2 border-solid flex justify-center items-center border-white mx-auto"
+          className="px-2 border-solid flex justify-center items-center border-white mx-auto pointer-events-auto"
           id="cta-button"
         >
           <div

@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { gsap, Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
 
 export default function SectionOne() {
   useEffect(() => {
@@ -62,6 +63,7 @@ export default function SectionOne() {
           </span>
         </p>
       </div>
+      <ChevronDoubleDownIcon className="h-6 w-6 stroke-white/50 animate-pulse inset-1/2 absolute bottom-10" />
     </div>
   );
 }
