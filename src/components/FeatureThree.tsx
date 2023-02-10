@@ -145,9 +145,7 @@ export default function FeatureThree() {
             <h1>
               <span className="bg-white invert text-black">{"p -> q,"}</span>
               <br />
-              <p className="mt-4">
-                bringing your projects to life with quality
-              </p>
+              <p className="mt-4">turning projects into quality products.</p>
             </h1>
 
             <h2 className="mt-6 text-lg leading-8 text-gray-600">
