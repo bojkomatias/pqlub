@@ -44,8 +44,9 @@
       ]
    },
    "team": {
-      "title": "the papirrines",
-      "subtitle": "The ones who do the crafting. We are a group of engineers, who love solving problems."
+      "title": "los papirrines",
+      "subtitle": "Somos un grupo de ingenieros a los que les encanta resolver problemas.",
+      "subtitle2":""
    },
    "cta": {
       "title": "Work with us",

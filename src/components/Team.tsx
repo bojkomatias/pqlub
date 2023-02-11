@@ -73,7 +73,15 @@ const memberDetails = ({
     </div>
   );
 };
-export default function Team() {
+export default function Team({
+  dictionary,
+}: {
+  dictionary: {
+    title:string;
+    subtitle:string;
+    subtitle2:string;
+  };
+}) {
   useEffect(() => {
     gsap.utils.toArray("#four").forEach((section: any) => {
       let tl = gsap.timeline({
@@ -123,9 +131,9 @@ export default function Team() {
     <div id="four" className="relative isolate min-h-screen w-full bg-black">
       <div className="overflow-hidden relative flex flex-col justify-center items-center text-center gap-4 md:items-start max-w-7xl mx-auto py-24">
         <div id="teamtxt" className="container z-10">
-          <h1 className="text-black font-outline-2">the papirrines,</h1>
-          <h2>The ones who do the crafting.</h2>
-          <h3>We are a group of engineers who love solving problems.</h3>
+          <h1 className="text-black font-outline-2">{dictionary.title}</h1>
+          <h2>{dictionary.subtitle}</h2>
+          <h3>{dictionary.subtitle2}</h3>
         </div>
 
         <div
