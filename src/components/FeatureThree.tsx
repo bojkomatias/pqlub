@@ -50,7 +50,15 @@ const features = [
 import gsap, { Power2 } from "gsap";
 import { useEffect } from "react";
 
-export default function FeatureThree() {
+export default function FeatureThree({
+  dictionary,
+}: {
+  dictionary: {
+    title:string;
+    subtitle:string;
+    action:string;
+  };
+}) {
   useEffect(() => {
     gsap.utils.toArray("#third").forEach((section: any) => {
       let tl = gsap.timeline({
