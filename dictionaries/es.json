@@ -14,32 +14,32 @@
       "action": "PRESUPUESTA TU IDEA"
    },
    "feature-3": {
-      "implies": "as precision leads to quality results.",
-      "subtitle": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.",
+      "implies": "calidad garantizada",
+      "subtitle": "Nuestro compromiso con la calidad garantiza que cada proyecto sea entregado con precisión y a los más altos estándares. Colabore con nosotros, la calidad está asegurada",
       "features": [
          {
             "name": "Tech consulting.",
-            "description": "We will help your business stay ahead in technology and reach their goals by assessing current systems, identifying areas for improvement, and recommending solutions."
+            "description": "Ayudaremos a su negocio a mantenerse a la vanguardia en tecnología y a alcanzar sus objetivos evaluando los sistemas actuales, identificando áreas de mejora y recomendando soluciones."
          },
          {
             "name": "Team growth.",
-            "description": "We will build and expand successful teams by hiring top talent, training and developing employees for your business."
+            "description": "Construimos equipos exitosos contratando el mejor talento, capacitando y desarrollando a los empleados para su negocio."
          },
          {
             "name": "Software engineering.",
-            "description": "We cover the entire development lifecycle and create custom solutions that meet clients unique needs to ensure project success."
+            "description": "Cubrimos todo el ciclo de desarrollo y creamos soluciones personalizadas que satisfacen las necesidades únicas de los clientes para garantizar el éxito del proyecto."
          },
          {
             "name": "UI/UX design.",
-            "description": "We will create engaging and intuitive user experiences for software and websites through wireframing, prototyping, and visually stunning designs."
+            "description": "Crearemos experiencias de usuario atractivas e intuitivas para software y sitios web a través de esquemas, prototipos y diseños visualmente sorprendentes."
          },
          {
             "name": "DevOps and maintenance.",
-            "description": "We integrate development and operations teams, automate processes, and provide ongoing support to ensure the reliability and performance of software systems."
+            "description": "Integramos los equipos de desarrollo y operaciones, automatizamos los procesos y brindamos soporte continuo para garantizar la fiabilidad y el rendimiento de los sistemas de software."
          },
          {
             "name": "Systems engineering.",
-            "description": "We will provide end-to-end solutions for complex systems, improving efficiency and effectiveness through assessment, recommendations, and integration."
+            "description": "Proporcionaremos soluciones integrales para sistemas complejos, mejorando la eficiencia y efectividad a través de la evaluación, las recomendaciones y la integración."
          }
       ]
    },
