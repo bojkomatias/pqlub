@@ -10,14 +10,18 @@ function getLocale(request: NextRequest): string | undefined {
    const negotiatorHeaders: Record<string, string> = {}
    request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
 
-   console.log(negotiatorHeaders)
+   // console.log(negotiatorHeaders)
 
    // Use negotiator and intl-localematcher to get best locale
    let languages = new Negotiator({ headers: negotiatorHeaders }).languages()
+
+   console.log(languages);
+   
    // @ts-ignore locales are readonly
    const locales: string[] = i18n.locales
    return matchLocale(languages, locales, i18n.defaultLocale)
 }
+
 
 
 export function middleware(request: NextRequest) {
@@ -28,12 +32,15 @@ export function middleware(request: NextRequest) {
       (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
    )
 
+   // Do not redirect if the pathname is an image or asset on the public folder
+   if (['/images/', '/assets/'].some((path) => pathname.startsWith(path))) return NextResponse.next()
+
    // Redirect if there is no locale
    if (pathnameIsMissingLocale) {
       const locale = getLocale(request)
 
       // e.g. incoming request is /products
-      // The new URL is now /en-US/products
+      // The new URL is now /en/products
       return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url))
    }
 }

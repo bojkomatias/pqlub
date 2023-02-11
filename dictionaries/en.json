@@ -1,6 +1,6 @@
 {
    "navbar": {
-      "to-cta": "Got something in mind?"
+      "got": "Got something in mind?"
    },
    "hero": {
       "text1": "we turn your",
@@ -52,6 +52,7 @@
       "title": "Work with us",
       "hey": "HEY YOU!",
       "tell": "Tell us about your project",
+      "email": "our email was copied",
       "action": "NOW!"
    }
 }

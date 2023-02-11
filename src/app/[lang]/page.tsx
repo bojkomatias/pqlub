@@ -1,4 +1,3 @@
-
 import { getDictionary } from "../../../dictionaries/get-dictionary";
 import Team from "@/components/Team";
 import Divider from "@/components/Divider";
@@ -12,7 +11,7 @@ import { Locale } from "@/i18n-config";
 export default async function Home({
   params: { lang },
 }: {
-  params: { lang: Locale  };
+  params: { lang: Locale };
 }) {
   const dictionary = await getDictionary(lang);
   return (
@@ -20,10 +19,10 @@ export default async function Home({
       <Loader />
       <Hero dictionary={dictionary.hero} />
       <Divider />
-      <FeatureTwo />
-      <FeatureThree />
-      <Team />
-      <Cta />
+      <FeatureTwo dictionary={dictionary["feature-2"]} />
+      <FeatureThree dictionary={dictionary["feature-3"]} />
+      <Team dictionary={dictionary.team} />
+      <Cta dictionary={dictionary.cta} />
     </main>
   );
 }

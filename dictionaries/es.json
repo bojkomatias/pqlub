@@ -1,6 +1,6 @@
 {
    "navbar": {
-      "to-cta": "Got something in mind?"
+      "got": "tenés algo pensado?"
    },
    "hero": {
       "text1": "transformamos tu proyecto",
@@ -49,9 +49,10 @@
       "subtitle2":""
    },
    "cta": {
-      "title": "Work with us",
-      "hey": "HEY YOU!",
-      "tell": "Tell us about your project",
-      "action": "NOW!"
+      "title": "¿Listo para comenzar?",
+      "hey": "¡HEY!",
+      "tell": "Contanos acerca de tu proyecto",
+      "email": "se ha copiado nuestro email",
+      "action": "YA!"
    }
 }

@@ -3,7 +3,17 @@ import React, { useState } from "react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-const Cta = () => {
+const Cta = ({
+  dictionary,
+}: {
+  dictionary: {
+    title:string;
+    hey:string;
+    tell:string;
+    action:string;
+    email:string;
+  };
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [wasCopied, setWasCopied] = useState(false);
   const copyToClipboard = () => {
@@ -27,7 +37,7 @@ const Cta = () => {
           "bg-green flex justify-center items-center text-black p-4 hover:bg-orange hover:text-white"
         }
       >
-        <span className="text-lg lg:text-3xl mr-2">NOW!</span>
+        <span className="text-lg lg:text-3xl mr-2">{dictionary.action}</span>
         <ArrowLongRightIcon className="w-6 h-6 inline-block" />
       </a>
     );
@@ -40,8 +50,8 @@ const Cta = () => {
     >
       <div className="absolute inset-x-0 bottom-20">
         <div className="flex flex-col justify-center items-center container mx-auto">
-          <h1 className="w-full text-center text-black">Work with us!</h1>
-          <Image src="/a.png" alt="contact-image" width={600} height={600} />
+          <h1 className="w-full text-center text-black">{dictionary.title}</h1>
+          <Image src="/assets/a.png" alt="contact-image" width={600} height={600} />
           {/* <h2>May be some asset here</h2> */}
         </div>
 
@@ -60,10 +70,10 @@ const Cta = () => {
                 className="lg:p-8 p-4 text-lg lg:text-3xl"
               >
                 {!isHovered
-                  ? "HEY YOU!"
+                  ? dictionary.hey
                   : wasCopied
-                  ? "our email was copied"
-                  : "tell us about your project"}
+                  ? dictionary.email
+                  : dictionary.tell}
               </p>
               {isHovered ? mailTo() : null}
             </>

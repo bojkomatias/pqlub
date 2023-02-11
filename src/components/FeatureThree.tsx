@@ -151,7 +151,7 @@ export default function FeatureThree({
           >
             <div
               id="img2"
-              className="rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('/dashboard.png')] bg-contain bg-top"
+              className="rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('/assets/dashboard.png')] bg-contain bg-top"
             />
           </div>
         </div>

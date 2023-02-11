@@ -55,7 +55,7 @@ export default function SectionOne({
           <p className="max-w-4xl text-center mx-auto z-10 drop-shadow text-4xl lg:text-7xl uppercase leading-[5rem]">
             {dictionary.text2.split(dictionary.specialWord2)[0]}
             <br />
-            <span className="px-16 font-bold tracking-widest font-serif text-black bg-[url('/brush1.svg')] bg-cover bg-center">
+            <span className="px-16 font-bold tracking-widest font-serif text-black bg-[url('/assets/brush1.svg')] bg-cover bg-center">
               {dictionary.specialWord2}
             </span>
             <br />
@@ -67,7 +67,7 @@ export default function SectionOne({
         <div className="bg-2 bg-no-repeat bg-center lg:bg-cover absolute inset-0 opacity-50" />
         <p className="max-w-4xl mx-auto text-center drop-shadow text-4xl lg:text-7xl uppercase leading-[5rem]">
           {dictionary.text1.split(dictionary.specialWord1)[0]} <br />
-          <span className="px-16 font-bold tracking-widest font-serif text-black bg-[url('/brush2.svg')] bg-cover bg-center">
+          <span className="px-16 font-bold tracking-widest font-serif text-black bg-[url('/assets/brush2.svg')] bg-cover bg-center">
             {dictionary.specialWord1}
           </span>
         </p>
