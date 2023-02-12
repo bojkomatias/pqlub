@@ -77,9 +77,9 @@ export default function Team({
   dictionary,
 }: {
   dictionary: {
-    title:string;
-    subtitle:string;
-    subtitle2:string;
+    title: string;
+    subtitle: string;
+    subtitle2: string;
   };
 }) {
   useEffect(() => {
@@ -131,22 +131,24 @@ export default function Team({
     <div id="four" className="relative isolate min-h-screen w-full bg-black">
       <div className="overflow-hidden relative flex flex-col justify-center items-center text-center gap-4 md:items-start max-w-7xl mx-auto py-24">
         <div id="teamtxt" className="container z-10">
-          <h1 className="text-black font-outline-2">{dictionary.title}</h1>
+          <h1 className="text-green md:text-black font-outline-2">
+            {dictionary.title}
+          </h1>
           <h2>{dictionary.subtitle}</h2>
           <h3>{dictionary.subtitle2}</h3>
         </div>
 
         <div
           id="teamout"
-          className="relative overflow-hidden w-full mt-6 h-[36rem] max-w-6xl -mx-1 lg:mx-auto lg:rounded-2xl shadow-white/10 shadow-2xl ring-white/5 ring-offset-8 ring-offset-white/5 ring-1 bg-white/15 -backdrop-hue-rotate-30 z-10"
+          className="relative overflow-hidden w-full mt-6 h-[36rem] max-w-6xl -mx-1 lg:mx-auto md:rounded-2xl shadow-white/10 shadow-2xl ring-white/5 ring-offset-8 ring-offset-white/5 ring-1 bg-white/15 -backdrop-hue-rotate-30 z-10"
         >
           <div
             id="teamin"
-            className="absolute inset-0 overflow-hidden rounded-2xl ring-8 ring-white/40"
+            className="absolute inset-0 overflow-hidden md:rounded-2xl ring-8 ring-white/40"
           >
             <div
               id="teampic"
-              className="ring=8 ring-white/40 absolute-inset-0 rounded-2xl h-full bg-papirrines bg-cover bg-center"
+              className="ring=8 ring-white/40 absolute-inset-0 md:rounded-2xl h-full bg-papirrines bg-cover bg-center"
             />
           </div>
         </div>

@@ -1,15 +1,15 @@
 "use client";
 
-import gsap, { Power2 } from "gsap";
+import { gsap, Power2 } from "gsap";
 import { useEffect } from "react";
 
 export default function FeatureTwo({
   dictionary,
 }: {
   dictionary: {
-    title:string;
-    subtitle:string;
-    action:string;
+    title: string;
+    subtitle: string;
+    action: string;
   };
 }) {
   useEffect(() => {
@@ -110,7 +110,7 @@ export default function FeatureTwo({
           id="text1"
           className="flex flex-col mt-6 md:justify-start mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 px-4"
         >
-          <h1 className="mt-10 text-black font-outline-2">
+          <h1 className="mt-10 text-green md:text-black font-outline-2">
             {dictionary.title}
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -124,7 +124,7 @@ export default function FeatureTwo({
         </div>
         <div
           id="ft1out"
-          className="relative overflow-hidden mx-auto mt-16 flex sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32 bg-black/10 backdrop-saturate-0 backdrop-contrast-200 rounded-2xl ring-1 ring-offset-8 ring-teal/20 ring-offset-navy/50 shadow-white/10 shadow-xl max-w-3xl flex-none sm:max-w-5xl w-[76rem] h-[40rem]"
+          className="relative overflow-hidden mx-auto mt-16 flex sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32 bg-black/10 backdrop-saturate-0 backdrop-contrast-200 rounded-2xl ring-1 ring-offset-8 ring-teal/20 ring-offset-navy/50 shadow-white/10 shadow-xl max-w-3xl flex-none mb-4 sm:max-w-5xl w-[76rem] h-[38rem]"
         >
           <div
             id="ft1in"

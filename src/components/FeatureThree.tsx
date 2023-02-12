@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import {
   CogIcon,
   CommandLineIcon,
@@ -17,26 +17,24 @@ const featuresIcons = [
   CogIcon,
 ];
 
-import gsap, { Power2 } from "gsap";
+import { gsap, Power2 } from "gsap";
 import { useEffect } from "react";
 
 export default function FeatureThree({
   dictionary,
 }: {
   dictionary: {
-    implies:string;
-    subtitle:string;
-    features:{name:string, description:string}[];
+    implies: string;
+    subtitle: string;
+    features: { name: string; description: string }[];
   };
 }) {
-
   const featuresWithIcons = dictionary.features.map((feature, index) => {
     return {
       ...feature,
       icon: featuresIcons[index],
     };
   });
-
 
   useEffect(() => {
     gsap.utils.toArray("#third").forEach((section: any) => {
@@ -147,11 +145,11 @@ export default function FeatureThree({
         >
           <div
             id="ft2in"
-            className="absolute inset-0 overflow-hidden ring-8 ring-green/30 rounded-2xl"
+            className="absolute inset-0 overflow-hidden ring-8 ring-green/30 md:rounded-2xl"
           >
             <div
               id="img2"
-              className="rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('/assets/dashboard.png')] bg-contain bg-top"
+              className="md:rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('/assets/dashboard.png')] bg-contain bg-top"
             />
           </div>
         </div>

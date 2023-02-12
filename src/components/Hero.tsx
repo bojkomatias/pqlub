@@ -1,17 +1,17 @@
 "use client";
 import { useEffect } from "react";
 import { gsap, Power1 } from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
 
 export default function SectionOne({
   dictionary,
 }: {
   dictionary: {
-    text1:string;
-    specialWord1:string;
-    text2:string;
-    specialWord2:string;
+    text1: string;
+    specialWord1: string;
+    text2: string;
+    specialWord2: string;
   };
 }) {
   useEffect(() => {

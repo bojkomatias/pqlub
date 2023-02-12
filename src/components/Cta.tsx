@@ -1,5 +1,5 @@
-'use client'
-import React, { useState } from "react";
+"use client";
+import { useState } from "react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
@@ -7,11 +7,11 @@ const Cta = ({
   dictionary,
 }: {
   dictionary: {
-    title:string;
-    hey:string;
-    tell:string;
-    action:string;
-    email:string;
+    title: string;
+    hey: string;
+    tell: string;
+    action: string;
+    email: string;
   };
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -51,7 +51,12 @@ const Cta = ({
       <div className="absolute inset-x-0 bottom-20">
         <div className="flex flex-col justify-center items-center container mx-auto">
           <h1 className="w-full text-center text-black">{dictionary.title}</h1>
-          <Image src="/assets/a.png" alt="contact-image" width={600} height={600} />
+          <Image
+            src="/assets/a.png"
+            alt="contact-image"
+            width={600}
+            height={600}
+          />
           {/* <h2>May be some asset here</h2> */}
         </div>
 

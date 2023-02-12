@@ -2,14 +2,13 @@
 
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 export default function Navbar({
   dictionary,
 }: {
   dictionary: {
-    got:string;
+    got: string;
   };
 }) {
   let [isOpen, setIsOpen] = useState(false);
