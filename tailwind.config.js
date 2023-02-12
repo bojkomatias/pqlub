@@ -16,8 +16,8 @@ module.exports = {
       },
       boxShadow: {},
       backgroundImage: {
-        '1': "url('/hero-bg.jpg')",
-        '2': "url('/hero-bg-dark.jpg')",
+        '1': "url('/assets/hero-bg.jpg')",
+        '2': "url('/assets/hero-bg-dark.jpg')",
         'papirrines': "url('/images/papirrines.jpg')",
       },
       transitionDuration: { DEFAULT: '300ms' },

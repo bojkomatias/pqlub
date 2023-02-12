@@ -1,3 +1,4 @@
+'use client'
 import {
   CogIcon,
   CommandLineIcon,
@@ -7,49 +8,36 @@ import {
   ArrowTrendingUpIcon,
 } from "@heroicons/react/20/solid";
 
-const features = [
-  {
-    name: "Tech consulting.",
-    description:
-      "We will help your business stay ahead in technology and reach their goals by assessing current systems, identifying areas for improvement, and recommending solutions.",
-    icon: RocketLaunchIcon,
-  },
-  {
-    name: "Team growth.",
-    description:
-      "We will build and expand successful teams by hiring top talent, training and developing employees for your business.",
-    icon: ArrowTrendingUpIcon,
-  },
-  {
-    name: "Software engineering.",
-    description:
-      "We cover the entire development lifecycle and create custom solutions that meet clients unique needs to ensure project success.",
-    icon: CommandLineIcon,
-  },
-  {
-    name: "UI/UX design.",
-    description:
-      "We will create engaging and intuitive user experiences for software and websites through wireframing, prototyping, and visually stunning designs.",
-    icon: WindowIcon,
-  },
-  {
-    name: "DevOps and maintenance.",
-    description:
-      "We integrate development and operations teams, automate processes, and provide ongoing support to ensure the reliability and performance of software systems.",
-    icon: ServerStackIcon,
-  },
-  {
-    name: "Systems engineering.",
-    description:
-      "We will provide end-to-end solutions for complex systems, improving efficiency and effectiveness through assessment, recommendations, and integration. ",
-    icon: CogIcon,
-  },
+const featuresIcons = [
+  RocketLaunchIcon,
+  ArrowTrendingUpIcon,
+  CommandLineIcon,
+  WindowIcon,
+  ServerStackIcon,
+  CogIcon,
 ];
 
 import gsap, { Power2 } from "gsap";
 import { useEffect } from "react";
 
-export default function FeatureThree() {
+export default function FeatureThree({
+  dictionary,
+}: {
+  dictionary: {
+    implies:string;
+    subtitle:string;
+    features:{name:string, description:string}[];
+  };
+}) {
+
+  const featuresWithIcons = dictionary.features.map((feature, index) => {
+    return {
+      ...feature,
+      icon: featuresIcons[index],
+    };
+  });
+
+
   useEffect(() => {
     gsap.utils.toArray("#third").forEach((section: any) => {
       let tl = gsap.timeline({
@@ -145,13 +133,11 @@ export default function FeatureThree() {
             <h1>
               <span className="bg-white invert text-black">{"p -> q,"}</span>
               <br />
-              <p className="mt-4">turning projects into quality products.</p>
+              <p className="mt-4">{dictionary.implies}</p>
             </h1>
 
             <h2 className="mt-6 text-lg leading-8 text-gray-600">
-              Our commitment to quality ensures every project is delivered with
-              precision and to the highest standards. Partner with us, quality
-              is rest assured.
+              {dictionary.subtitle}
             </h2>
           </div>
         </div>
@@ -165,7 +151,7 @@ export default function FeatureThree() {
           >
             <div
               id="img2"
-              className="rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('/dashboard.png')] bg-contain bg-top"
+              className="rounded-2xl ring-8 ring-green/30 absolute-inset-0 h-full bg-[url('/assets/dashboard.png')] bg-contain bg-top"
             />
           </div>
         </div>
@@ -175,7 +161,7 @@ export default function FeatureThree() {
           className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8"
         >
           <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-            {features.map((feature) => (
+            {featuresWithIcons.map((feature) => (
               <div key={feature.name} className="relative pl-9">
                 <dt className="inline font-semibold text-navy">
                   <feature.icon

@@ -3,7 +3,15 @@
 import gsap, { Power2 } from "gsap";
 import { useEffect } from "react";
 
-export default function FeatureTwo() {
+export default function FeatureTwo({
+  dictionary,
+}: {
+  dictionary: {
+    title:string;
+    subtitle:string;
+    action:string;
+  };
+}) {
   useEffect(() => {
     gsap.utils.toArray("#second").forEach((section: any) => {
       let tl = gsap.timeline({
@@ -103,16 +111,14 @@ export default function FeatureTwo() {
           className="flex flex-col mt-6 md:justify-start mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 px-4"
         >
           <h1 className="mt-10 text-black font-outline-2">
-            {"Let's work together"}
+            {dictionary.title}
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Bring your visions to life with our team of engineers. We craft
-            solutions to make your project a reality, all within budget. Start
-            turning your ideas into reality with us now.
+            {dictionary.subtitle}
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <h2 className="hover:bg-orange border-black text-black py-2 uppercase border-2 transition-bg duration-500 ease-in-out transform hover:text-white hover:border-black hover:lowercase hover:font-serif bg-green hover:tracking-wider hover:text-2xl transition text-xl cursor-pointer px-4">
-              Budget your idea
+              {dictionary.action}
             </h2>
           </div>
         </div>

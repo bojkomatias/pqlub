@@ -5,7 +5,13 @@ import { Fragment, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar({
+  dictionary,
+}: {
+  dictionary: {
+    got:string;
+  };
+}) {
   let [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -21,7 +27,7 @@ export default function Navbar() {
         <span className="flex-grow" />
         <a href="#cta" className="hidden md:block">
           <h2 className="hover:bg-orange border-black text-black py-2 uppercase border-2 transition-bg duration-500 ease-in-out transform hover:text-white hover:border-black hover:lowercase  hover:font-serif bg-green hover:tracking-wider hover:text-2xl transition text-xl cursor-pointer px-4 mr-6 ">
-            Got something in mind?
+            {dictionary.got}
           </h2>
         </a>
         {/* {isOpen ? (

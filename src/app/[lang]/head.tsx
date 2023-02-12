@@ -4,7 +4,7 @@ export default function Head() {
       <title>pqclub | Software Engineering</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content="Software consultant" />
-      <link rel="icon" href="/logo.svg" />
+      <link rel="icon" href="/assets/logo.svg" />
     </>
   );
 }
