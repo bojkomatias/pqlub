@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { gsap, Power2 } from "gsap";
 import Link from "next/link";
+import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
 
 interface TeamMember {
   name: string;
@@ -132,6 +133,8 @@ export default function Team({
 
   return (
     <div id="four" className="relative isolate min-h-screen w-full bg-black">
+      <ChevronDoubleDownIcon className="h-6 w-6 animate-pulse stroke-green/50 inset-x-1/2 absolute bottom-10 z-10" />
+
       <div className="overflow-hidden relative flex flex-col justify-center items-center text-center gap-4 md:items-start max-w-7xl mx-auto py-24">
         <div id="teamtxt" className="container z-10">
           <h1 className="text-green md:text-black font-outline-2">
@@ -143,7 +146,7 @@ export default function Team({
 
         <div
           id="teamout"
-          className="relative overflow-hidden w-full mt-6 h-[36rem] max-w-6xl -mx-1 lg:mx-auto md:rounded-2xl shadow-white/10 shadow-2xl ring-white/5 ring-offset-8 ring-offset-white/5 ring-1 bg-white/15 -backdrop-hue-rotate-30 z-10"
+          className="relative overflow-hidden w-full mt-6 h-[20rem] md:h-[36rem] max-w-7xl -mx-1 lg:mx-auto md:rounded-2xl shadow-white/10 shadow-2xl ring-white/5 ring-offset-8 ring-offset-white/5 ring-1 bg-white/15 -backdrop-hue-rotate-30 z-10"
         >
           <div
             id="teamin"

@@ -73,7 +73,7 @@ export default function SectionOne({
           </span>
         </p>
       </div>
-      <ChevronDoubleDownIcon className="h-6 w-6 stroke-white/50 animate-pulse inset-1/2 absolute bottom-10" />
+      <ChevronDoubleDownIcon className="h-6 w-6 animate-pulse stroke-green/50 inset-x-1/2 absolute bottom-10 z-10" />
     </div>
   );
 }
