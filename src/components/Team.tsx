@@ -87,7 +87,7 @@ export default function Team({
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top center",
+          start: "top bottom",
           end: () => "-=20+=" + section.offsetWidth,
           scrub: true,
           anticipatePin: 1,

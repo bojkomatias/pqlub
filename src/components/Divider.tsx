@@ -16,6 +16,30 @@ interface ParallaxProps {
   baseVelocity?: number;
 }
 
+const Content = () => (
+  <>
+    <span className="bg-black text-green">DESIGN</span>
+    <span className="bg-white text-navy">ENGINEER</span>
+    <span className="bg-black text-green">DEVELOP</span>
+    <span className="bg-white text-navy">ARCHITECT</span>
+    <span className="bg-black text-green">BUILD</span>
+    <span className=" text-navy bg-white">DEPLOY</span>
+    <span className="bg-black text-green">SHIP</span>
+    <span className="bg-white text-navy">PLAN</span>
+    <span className="bg-black text-green">DIAGRAM</span>
+    <span className="bg-white text-navy">IMPLEMENT</span>
+    <span className="bg-black text-green">DESIGN</span>
+    <span className="bg-white text-navy">ENGINEER</span>
+    <span className="bg-black text-green">DEVELOP</span>
+    <span className="bg-white text-navy">ARCHITECT</span>
+    <span className="bg-black text-green">BUILD</span>
+    <span className=" text-navy bg-white">DEPLOY</span>
+    <span className="bg-black text-green">SHIP</span>
+    <span className="bg-white text-navy">PLAN</span>
+    <span className="bg-black text-green">DIAGRAM</span>
+    <span className="bg-white text-navy">IMPLEMENT</span>
+  </>
+);
 function ParallaxText({ baseVelocity = -2 }: ParallaxProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
@@ -64,26 +88,7 @@ function ParallaxText({ baseVelocity = -2 }: ParallaxProps) {
   return (
     <div className="parallax">
       <motion.div className="scroller" style={{ x }}>
-        <span className="bg-black text-green">DESIGN</span>
-        <span className="bg-white text-navy">ENGINEER</span>
-        <span className="bg-black text-green">DEVELOP</span>
-        <span className="bg-white text-navy">ARCHITECT</span>
-        <span className="bg-black text-green">BUILD</span>
-        <span className=" text-navy bg-white">DEPLOY</span>
-        <span className="bg-black text-green">SHIP</span>
-        <span className="bg-white text-navy">PLAN</span>
-        <span className="bg-black text-green">DIAGRAM</span>
-        <span className="bg-white text-navy">IMPLEMENT</span>
-        <span className="bg-black text-green">DESIGN</span>
-        <span className="bg-white text-navy">ENGINEER</span>
-        <span className="bg-black text-green">DEVELOP</span>
-        <span className="bg-white text-navy">ARCHITECT</span>
-        <span className="bg-black text-green">BUILD</span>
-        <span className=" text-navy bg-white">DEPLOY</span>
-        <span className="bg-black text-green">SHIP</span>
-        <span className="bg-white text-navy">PLAN</span>
-        <span className="bg-black text-green">DIAGRAM</span>
-        <span className="bg-white text-navy">IMPLEMENT</span>
+        <Content />
       </motion.div>
     </div>
   );
@@ -92,8 +97,11 @@ function ParallaxText({ baseVelocity = -2 }: ParallaxProps) {
 export default function Divider() {
   return (
     <div className="w-full flex items-center overflow-hidden h-fit bg-white">
-      <div className="whitespace-nowrap text-[3rem] md:text-[5rem] tracking-widest line-through decoration-orange decoration-8">
+      <div className="hidden md:block whitespace-nowrap text-[3rem] md:text-[5rem] tracking-widest line-through decoration-orange decoration-8">
         <ParallaxText />
+      </div>
+      <div className="md:hidden whitespace-nowrap text-[3rem] md:text-[5rem] tracking-widest line-through decoration-orange decoration-8">
+        <Content />
       </div>
     </div>
   );

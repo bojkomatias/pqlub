@@ -41,7 +41,7 @@ export default function FeatureThree({
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top center",
+          start: "top bottom",
           end: "top top",
           scrub: true,
           anticipatePin: 1,

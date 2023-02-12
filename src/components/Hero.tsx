@@ -21,7 +21,7 @@ export default function SectionOne({
         scrollTrigger: {
           trigger: section,
           start: "center center",
-          end: () => "+=" + section.offsetWidth / 2,
+          end: () => "+=" + section.offsetWidth,
           scrub: true,
           pin: true,
           pinSpacing: true,

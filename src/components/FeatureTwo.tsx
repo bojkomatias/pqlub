@@ -17,7 +17,7 @@ export default function FeatureTwo({
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top center",
+          start: "top bottom",
           end: "top top",
           scrub: true,
           once: true,
