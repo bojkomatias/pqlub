@@ -37,6 +37,7 @@ export default function FeatureThree({
   });
 
   useEffect(() => {
+    let mm = gsap.matchMedia();
     gsap.utils.toArray("#third").forEach((section: any) => {
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -49,16 +50,18 @@ export default function FeatureThree({
         },
         defaults: { ease: Power2.easeInOut },
       });
-      tl.fromTo(
-        section.querySelector("#text2"),
-        { yPercent: -20, scale: 1.2 },
-        { yPercent: 0, scale: 1 }
-      ).fromTo(
-        section.querySelector("#ft2out"),
-        { yPercent: 50, opacity: 0, scale: 2 },
-        { yPercent: 0, opacity: 1, scale: 1 },
-        0
-      );
+      mm.add("(min-width: 768px)", () => {
+        tl.fromTo(
+          section.querySelector("#text2"),
+          { yPercent: -20, scale: 1.2 },
+          { yPercent: 0, scale: 1 }
+        ).fromTo(
+          section.querySelector("#ft2out"),
+          { yPercent: 50, opacity: 0, scale: 2 },
+          { yPercent: 0, opacity: 1, scale: 1 },
+          0
+        );
+      });
     });
     gsap
       .timeline({

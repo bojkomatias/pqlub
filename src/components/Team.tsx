@@ -83,6 +83,7 @@ export default function Team({
   };
 }) {
   useEffect(() => {
+    let mm = gsap.matchMedia();
     gsap.utils.toArray("#four").forEach((section: any) => {
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -95,16 +96,18 @@ export default function Team({
         },
         defaults: { ease: Power2.easeInOut },
       });
-      tl.fromTo(
-        section.querySelector("#teamtxt"),
-        { yPercent: 50, scale: 1.3 },
-        { yPercent: 0, scale: 1 }
-      ).fromTo(
-        section.querySelector("#teamout"),
-        { yPercent: -90, opacity: 0, scale: 0.7 },
-        { yPercent: 0, opacity: 1, scale: 1 },
-        0
-      );
+      mm.add("(min-width: 768px)", () => {
+        tl.fromTo(
+          section.querySelector("#teamtxt"),
+          { yPercent: 50, scale: 1.3 },
+          { yPercent: 0, scale: 1 }
+        ).fromTo(
+          section.querySelector("#teamout"),
+          { yPercent: -90, opacity: 0, scale: 0.7 },
+          { yPercent: 0, opacity: 1, scale: 1 },
+          0
+        );
+      });
     });
     gsap
       .timeline({

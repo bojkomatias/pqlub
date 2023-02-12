@@ -29,6 +29,7 @@ export default function SectionOne({
         },
         defaults: { ease: Power1.easeInOut },
       });
+
       tl.fromTo(
         section.querySelector("#outer"),
         { yPercent: -100, x: 0 },
