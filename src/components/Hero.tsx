@@ -16,12 +16,13 @@ export default function SectionOne({
 }) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.normalizeScroll(true);
     gsap.utils.toArray("#first").forEach((section: any) => {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
           start: "center center",
-          end: () => "+=" + section.offsetWidth,
+          end: ()=> "+=" + section.offsetWidth,
           scrub: true,
           pin: true,
           pinSpacing: true,
