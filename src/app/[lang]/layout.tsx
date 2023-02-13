@@ -3,6 +3,7 @@ import { Lexend_Deca, Architects_Daughter } from "@next/font/google";
 import Navbar from "@/components/Navbar";
 import { i18n } from "../../i18n-config";
 import { getDictionary } from "dictionaries/get-dictionary";
+import { AnalyticsWrapper } from "./AnalyticWrapper";
 
 const sans = Lexend_Deca({ subsets: ["latin"], variable: "--font-sans" });
 const handwritten = Architects_Daughter({
@@ -36,6 +37,7 @@ export default async function RootLayout({
       <head />
       <body className="overflow-x-hidden flex h-full w-screen text-white bg-navy">
         <Navbar dictionary={dictionary.navbar} /> {children}
+        <AnalyticsWrapper />
       </body>
     </html>
   );
