@@ -73,16 +73,16 @@ export default function Loader() {
   return (
     <div
       id="load"
-      className="z-50 fixed h-screen w-full flex items-center justify-center bg-black"
+      className="z-50 fixed h-screen w-screen flex items-center justify-center bg-black"
     >
       <h1
         id="loadtxt"
-        className="opacity-0 mt-8 ml-6 md:ml-0 flex items-center h-full drop-shadow text-[16rem]"
+        className="opacity-0   flex items-center h-full drop-shadow text-[16rem]"
       >
         <span id="p">p</span>
         <span
           id="implies"
-          className="text-[8rem] mt-60 -mx-10 text-transparent bg-clip-text"
+          className="text-[8rem] mt-60  text-transparent bg-clip-text"
         >
           {"->"}
         </span>

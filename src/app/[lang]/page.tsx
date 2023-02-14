@@ -15,7 +15,7 @@ export default async function Home({
 }) {
   const dictionary = await getDictionary(lang);
   return (
-    <main className="w-full antialiased flex flex-col items-center">
+    <main className="w-screen antialiased flex flex-col items-center">
       <Loader />
       <Hero dictionary={dictionary.hero} />
       <Divider />
