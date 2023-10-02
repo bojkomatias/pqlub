@@ -1,3 +1,4 @@
+'use client'
 import { useId } from 'react'
 import { type Metadata } from 'next'
 import Link from 'next/link'
@@ -51,10 +52,34 @@ function RadioInput({
   )
 }
 
-function ContactForm() {
+async function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
-      <form>
+      <form
+        id="form"
+        onSubmit={async (e) => {
+          e.preventDefault()
+          const form = document.getElementById('form')
+          const submitter = document.querySelector('button[value=save]')
+          const formData = new FormData(form as any, submitter as any)
+
+          const name = formData.get('name')
+          const email = formData.get('email')
+          const company = formData.get('company')
+          const phone = formData.get('phone')
+          const message = formData.get('message')
+          const budget = formData.get('budget')?.valueOf()
+
+          const emailMessage = `Name: ${name}\n Email: ${email}\n Company: ${company}\n Phone number: ${phone}\n Message: ${message}\n Budget: ${budget}`
+
+          console.log(emailMessage)
+
+          const res = await fetch('/api/emailer', {
+            method: 'POST',
+            body: JSON.stringify(emailMessage),
+          })
+        }}
+      >
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
@@ -85,7 +110,7 @@ function ContactForm() {
             </fieldset>
           </div>
         </div>
-        <Button type="submit" className="mt-10">
+        <Button value="save" type="submit" className="mt-10">
           Let’s work together
         </Button>
       </form>
@@ -113,7 +138,7 @@ function ContactDetails() {
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
             ['Careers', 'contact@nicohorn.com'],
-            ['Press', 'contact@nicohorn.com'],
+            ['Press', 'bojko.matias@gmail.com'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>

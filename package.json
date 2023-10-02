@@ -27,6 +27,7 @@
     "framer-motion": "^10.15.2",
     "heroicons": "^2.0.18",
     "next": "13.4.16",
+    "nodemailer": "^6.9.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "recma-import-images": "0.0.3",
@@ -39,6 +40,7 @@
     "unified-conditional": "0.0.2"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.11",
     "eslint": "8.26.0",
     "eslint-config-next": "13.4.16",
     "prettier": "^3.0.1",

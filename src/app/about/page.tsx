@@ -10,18 +10,10 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+
+import imageMatias from '/public/images/mati.jpg'
+import imageAmilcar from '/public/images/amilcar.jpeg'
+import imageNicolas from '/public/images/nicolas.png'
 import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
@@ -61,19 +53,19 @@ const team = [
     title: 'Leadership',
     people: [
       {
-        name: 'Leslie Alexander',
+        name: 'Matías Bojko',
         role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
+        image: { src: imageMatias },
       },
       {
-        name: 'Michael Foster',
+        name: 'Nicolás Horn',
         role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
+        image: { src: imageNicolas },
       },
       {
-        name: 'Dries Vincent',
+        name: 'Amilcar Rey',
         role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
+        image: { src: imageAmilcar },
       },
     ],
   },
