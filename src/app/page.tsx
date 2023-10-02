@@ -158,7 +158,7 @@ function Services() {
               used for the past six years.
             </ListItem>
             <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
+              At pqlub we understand the importance of having a robust and
               customised CMS. That’s why we run all of our client projects out
               of a single, enormous Joomla instance.
             </ListItem>
