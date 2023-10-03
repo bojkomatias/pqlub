@@ -1,4 +1,3 @@
-'use client'
 import { useId } from 'react'
 import { type Metadata } from 'next'
 import Link from 'next/link'
